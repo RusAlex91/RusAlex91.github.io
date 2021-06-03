@@ -1,11 +1,16 @@
 const latest = document.getElementById("latest");
+const popular = document.getElementById("popular");
+const later = document.getElementById("later");
 const key = "ZL5vO5IOfvFBGrW7BcOiPkde9pXkzxW4";
 const wrapper = document.getElementsByClassName("articles-wrapper")[0]
+
 var sheet = document.getElementById('sheet').sheet
 var articleNum = 0;
 
+const preload = document.getElementById("article-news-img")
 
-latest.addEventListener("onload", getLastFeed())
+
+
 
 function getLastFeed() {
     fetch(`https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=${key}`)
@@ -14,10 +19,30 @@ function getLastFeed() {
             return res.json()
         })
         .then(function(data) {
-            createArticles(data)
+            deliteArticles()
+            deselectNav()
+            latest.classList.add("selected")
+            createArticles(data, "last")
         })
+}
 
+function getMostPopularFeed() {
+    fetch(`https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=${key}`)
+        .then(function(res) {
+            return res.json()
+        })
+        .then(function(data) {
+            deselectNav()
+            popular.classList.add("selected")
+            deliteArticles()
+            createArticles(data, "popular")
+        })
+}
 
+function deselectNav() {
+    latest.classList.remove("selected")
+    popular.classList.remove("selected")
+    latest.classList.remove("selected")
 }
 
 function getProperDate(date) {
@@ -35,22 +60,36 @@ function getProperDate(date) {
     let mouthName = mS[monthNumber]
     let tempHour = splitDate[2].split("").slice(3).join("")
     let hour = tempHour.split(":").slice(0, 2).join(":")
+    console.log(hour)
     let ampmHour = tempHour.split(":").slice(0, 1).join(":")
     let ampm = (ampmHour >= 12) ? "PM" : "AM";
     let dateString = `${mouthName} ${newDate} at ${hour} ${ampm}`
+    if (hour == "") {
+        dateString = `${mouthName} ${newDate}`
+    }
+
     return dateString
 }
 
-function createArticles(data) {
+function createArticles(data, type) {
     console.log(data.results)
     let articles = data.results
     articles.forEach((news, i) => {
         articleNum = articleNum + 1
         let articleImgUrl = ""
         if (news.multimedia != null) {
+
             for (let image = 0; image < news.multimedia.length; image++) {
                 if (news.multimedia[image].format == "mediumThreeByTwo440") {
                     articleImgUrl = news.multimedia[image].url
+                }
+            }
+        } else if (news.media != null) {
+
+            let arr = news.media[0]["media-metadata"]
+            for (let image = 0; image < arr.length; image++) {
+                if (arr[image].format == "mediumThreeByTwo440") {
+                    articleImgUrl = arr[image].url
                 }
             }
         }
@@ -64,10 +103,12 @@ function createArticles(data) {
             `
         var css_rules_num = sheet.cssRules.length;
         sheet.insertRule(cssRule, css_rules_num);
-
+        // 
         //add html
         let date = getProperDate(news.published_date)
-        let tempString = `<div class="article-news-inner-wrapper story${articleNum}">
+        let tempString = `
+        <div class="blurred article-news-img story${articleNum}" "></div>
+        <div class="article-news-inner-wrapper ">
     <a href="${news.url}">
         <h2 class="article-news-title">${news.title}</h2>
     </a>
@@ -79,9 +120,31 @@ function createArticles(data) {
         let div = document.createElement("div");
         wrapper.appendChild(div)
         div.innerHTML = tempString
-
-
-
+        changePreloadImg()
     });
 
 }
+
+function changePreloadImg() {
+    let arr = document.getElementsByClassName("article-news-img")
+    for (let bg = 0; bg < arr.length; bg++) {
+        var imgPath = arr[bg].style.backgroundImage;
+        if (imgPath) {
+            $('<img>').attr('src', imgPath).load(function() {
+                $(this).remove();
+                // [do something here...]
+            });
+        }
+
+    }
+
+}
+
+function deliteArticles() {
+    wrapper.innerHTML = ""
+}
+
+latest.addEventListener("click", getLastFeed)
+popular.addEventListener("click", getMostPopularFeed)
+
+getLastFeed()
