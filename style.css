@@ -189,8 +189,8 @@
         }
         
         .sticky+.articles-wrapper {
-            padding-top: 32px;
-            transition: all 0.1s;
+            /* padding-top: 32px;
+            transition: all 0.1s; */
         }
         
         .hidden-search {
