@@ -25,15 +25,44 @@
         }
         
         #search-bar {
-            display: none;
+            z-index: -1;
+            position: absolute;
         }
         
-        #category {
-            display: none;
+        .search-wrapper {
+            position: relative;
+            width: 375px;
         }
+        
+        #search-bar input {
+            width: 375px;
+            height: 35px;
+            background-color: lightgray;
+            color: black;
+        }
+        
+        #search-bar input:focus {
+            outline: none;
+        }
+        
+        #search-bar button {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 5px;
+            right: 50px;
+            background-color: lightgray;
+            background-image: url(arrow.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            border: none;
+            cursor: pointer;
+        }
+        
+        #category {}
         
         .nav-bar {
-            background-color: rgba(81, 79, 76, 0.8);
+            background-color: rgb(116, 113, 109);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -53,6 +82,7 @@
             text-transform: uppercase;
             padding-top: 5px;
             border-bottom: 5px solid transparent;
+            font-size: 13px;
         }
         
         .nav-bar a:hover {
@@ -91,7 +121,7 @@
             font-size: 12px;
             clip-path: polygon(0 0, 100% 0, 84% 100%, 0 100%);
             background-color: rgba(90, 200, 250, 0.8);
-            width: 67px;
+            width: 80px;
             height: 18px;
             color: white;
             padding-left: 7px;
@@ -117,6 +147,7 @@
         
         .articles-wrapper {
             background-color: gray;
+            transition: all 0.2s;
         }
         
         .story1 {
@@ -130,11 +161,12 @@
             left: 0;
             right: 0;
             width: 375px;
-            height: 120px;
+            height: 142px;
+            object-fit: cover;
+            filter: brightness(50%);
         }
         
         .blurred {
-            filter: blur(10px);
             animation: loader 1.5s infinite;
             animation-direction: alternate;
         }
@@ -146,4 +178,26 @@
             to {
                 background-color: lightgray;
             }
+        }
+        
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+            transition: all 0.1s;
+        }
+        
+        .sticky+.articles-wrapper {
+            padding-top: 32px;
+            transition: all 0.1s;
+        }
+        
+        .hidden-search {
+            opacity: 0;
+            transition: opacity 0.1s linear;
+        }
+        
+        .hidden-search:hover {
+            opacity: 1;
         }

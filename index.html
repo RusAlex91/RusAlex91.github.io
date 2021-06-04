@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link id="sheet" rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="clear-styles.css">
+
+    <link rel="shortcut icon" type="image/jpg" href="icon.ico" />
     <title>New York Times App</title>
 </head>
 
@@ -15,17 +17,16 @@
         <nav class="nav-bar">
             <a href="#latest" id="latest" class="selected">Latest</a>
             <a href="#popular" id="popular" class=" ">Popular</a>
+            <a href="#category" id="category">Categories</a>
             <a href="#readLater" id="later" class="">Read Later</a>
         </nav>
         <form id="search-bar">
-            <input type="search" placeholder="Search">
+            <div class="search-wrapper">
+                <input id="search-input" type="search" placeholder="Search">
+                <button id="search-button" type="button"></button>
+            </div>
         </form>
-        <select name="filter" id="category">
-            <option value="">1</option>
-            <option value="">2</option>
-            <option value="">3</option>
-            <option value="">4</option>
-        </select>
+
         <div class="articles-wrapper ">
             <!-- <article class="article-news">
                 <div class="blurred article-news-img"></div>
