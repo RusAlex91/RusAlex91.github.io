@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../scripts/clippy/build/clippy.css"
+      media="all"
+    />
+    <title>Portfolio</title>
+  </head>
+
+  <body class="">
+    <div class="crt main">
+      <div class="header">
+        <div class="header-wrapper">
+          <span class="header-wordArtFirst"> Персональный </span>
+          <span class="header-wordArtSecond"> сайт-портфолио </span>
+          <span class="header-wordArtThird"> Digital WEB</span>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="panel-wrapper">
+          <div class="icons">
+            <div onclick="test()" class="icons-item computer">
+              <img
+                src="../assets/icons/pc-icon.png"
+                alt="Мой компьютер"
+                height="48"
+                width="48"
+              />
+              <span>Мой компьютер</span>
+            </div>
+            <div class="icons-item briefcase">
+              <img
+                src="../assets/icons/briefcase.png"
+                alt="Компьютер"
+                height="48"
+                width="48"
+              />
+              <span>Портфолио</span>
+            </div>
+            <div class="icons-item disk">
+              <img
+                src="../assets/icons/cd_drive.png"
+                alt="сд-дисковод"
+                height="48"
+                width="48"
+              />
+              <span class="disk-text disk-animation"
+                >Отключить этот эффект ради бога</span
+              >
+            </div>
+            <div class="icons-item contact-me">
+              <img
+                src="../assets/icons/desktop_old.png"
+                alt="Блокнот"
+                height="48"
+                width="48"
+              />
+              <span>Связаться со мной</span>
+            </div>
+            <div class="icons-item">
+              <img
+                src="../assets/icons/directory_open.png"
+                alt="Папка"
+                height="48"
+                width="48"
+              />
+              <span>Мемаасыы</span>
+            </div>
+            <div class="icons-item trash">
+              <img
+                src="../assets/icons/recycle_bin.png"
+                alt="Корзина"
+                height="48"
+                width="48"
+              />
+              <span>Причины чтобы жить</span>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-wrapper">
+          <div class="portfolio-items">
+            <div class="portfolio-items-wrapper">
+              <div class="item-wrapper">
+                <div id="popup" class="pop-up">
+                  <div id="popup-header" class="top-bar window ">
+                    <div class="title-bar ">
+                      <div class="title-bar-text">Portfolio</div>
+                      <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                      </div>
+                    </div>
+                    <div class="pseudo-panel">
+                      <button
+                        onclick="controls.toggleMainPortfolioControls(), controls.showPortfolioItem()"
+                      >
+                        File
+                      </button>
+                      <button>Edit</button>
+                      <button>View</button>
+                      <button>About</button>
+                      <div class="field-row ">
+                        <label for="text17">Address</label>
+                        <input
+                          class="address-input"
+                          id="text17"
+                          type="text"
+                          value="C:/User/Documents/Portfolio/"
+                        />
+                      </div>
+                    </div>
+                    <div class="window">
+                      <div class="window-body">
+                        <div class="projects-category">
+                          <figure
+                            onclick="animations.folderLoading('heavy')"
+                            class="heavy-projects-folder figure"
+                          >
+                            <img src="/assets/directory_e-5.png" alt="" />
+                            <figcaption>Большие проекты</figcaption>
+                          </figure>
+                          <figure
+                            onclick="animations.folderLoading('medium')"
+                            class="medium-projects-folder figure"
+                          >
+                            <img src="/assets/directory_e-5.png" alt="" />
+                            <figcaption>Средние проекты</figcaption>
+                          </figure>
+                          <figure
+                            onclick="animations.folderLoading('light')"
+                            class="light-projects-folder figure"
+                          >
+                            <img src="/assets/directory_e-5.png" alt="" />
+                            <figcaption>Небольшие проекты</figcaption>
+                          </figure>
+                        </div>
+                        <div class="project-heavy-sub-category hidden-d"></div>
+                        <div class="project-medium-sub-category hidden-d"></div>
+                        <div class="project-light-sub-category hidden-d"></div>
+                        <div class="project-item-case"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div id="" class="portfolio-item hidden-o">
+                    <div class="text-editor-wrapper">
+                      <img
+                        src="./assets/Windows-98-Notepad.png"
+                        alt=""
+                        width="600px"
+                      />
+                      <div class="text-editor-text-wrapper">
+                        <h3 class="portfolio-item-title">
+                          lorem ipsum dolor sit amet
+                        </h3>
+                        <p class="portfolio-item-description">
+                          lorem ipsum dolor sit amet, consectetur adip lorem
+                          ipsum dolor sit amet, consectetur adip lorem ipsum
+                          dolor sit amet, consectetur adiplorem ipsum dolor sit
+                          amet, consectetur adip consectetur adiplorem ipsum
+                          dolor sit amet, consectetur adip
+                        </p>
+                        <a href="" class="portfolio-item-github-link">github</a>
+                      </div>
+                    </div>
+                    <div class="paint-wrapper">
+                      <img class="paint" src="../assets/paint98.png" alt="" />
+                      <img
+                        class="portfolioImg"
+                        alt=""
+                        src="../assets/portfolio/big/test.png"
+                        width="600"
+                      />
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-wrapper hidden-d">
+          <div class="mail">
+            <img
+              src="../assets/win98seOutlook.png"
+              alt=""
+              width="480"
+              height="321"
+            />
+            <form class="">
+              <input type="email" class="" placeholder="Email" />
+              <textarea class="" placeholder="Message"></textarea>
+              <button class="">SEND</button>
+            </form>
+          </div>
+          <div class="phone">
+            <img
+              src="../assets/win98phoneDiler.png"
+              alt=""
+              width="293"
+              height="313"
+            />
+            <div class="form">
+              <input disabled type="text" placeholder="Contact Me" />
+              <button>Let`s go</button>
+            </div>
+            <div class="contacts">
+              <button>Phone</button>
+              <button>Github</button>
+              <button>SocialMedia</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <!-- Clippy.js -->
+    <script src="../scripts/clippy/jquery.1.7.min.js"></script>
+    <script src="../scripts/clippy/build/clippy.js"></script>
+    <script src="data.js"></script>
+    <script type="text/javascript">
+      clippy.load('Clippy', function (agent) {
+        console.log(agent.animations())
+        // Do anything with the loaded agent
+        agent.show()
+        agent.moveTo(800, 400)
+        agent.play('GestureRight')
+        agent.speak('Штош предлагаю начать откуда-то отсюда')
+
+        document
+          .getElementsByClassName('computer')[0]
+          .addEventListener('click', function name (params) {
+            agent.speak('Сасай')
+          })
+      })
+    </script>
+  </body>
+</html>
