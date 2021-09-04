@@ -7,7 +7,7 @@ const portfolioCases = {
         'Простой музыкальный плеер. Использованные технологии: HTML, CSS, JS',
       github: 'https://github.com/RusAlex91/1.-Register-Validator',
       src: '../assets/portfolio/light/testgif2.gif',
-      webLink: 'RusAlex.github.io/lite/retro-player/dist'
+      webLink: '/lite/retro-player/dist'
     },
     2: {
       id: 2,
