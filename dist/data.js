@@ -6,16 +6,17 @@ const portfolioCases = {
       desc:
         'Простой музыкальный плеер. Использованные технологии: HTML, CSS, JS',
       github: 'https://github.com/RusAlex91/1.-Register-Validator',
-      src: '../assets/portfolio/light/testgif2.gif',
+      src: '../assets/portfolio/light/RMP.gif',
       webLink: 'https://rusalex91.github.io/projects/lite/retro-player/dist/'
     },
     2: {
       id: 2,
-      name: 'Register Validator 2',
+      name: 'Old Web Page',
       desc:
-        'Валидация формы регистрации. Использованные технологии: HTML, CSS, JS test',
+        'Фановый проект по воссозданию страницы из старого интернета. Использованные технологии: HTML, CSS, JS',
       github: 'https://github.com/RusAlex91/1.-Register-Validator',
-      src: '../assets/portfolio/light/test.png'
+      src: '../assets/portfolio/light/Oldweb.gif',
+      webLink: 'https://rusalex91.github.io/projects/lite/oldweb'
     },
     3: {
       id: 3,

@@ -198,7 +198,7 @@ const portfolioCreation = {
         <p class="portfolio-item-description">
           ${desc}
         </p>
-        <p class='portfolio-item-description'>Посмотреть можно <a  target=”_blank${id}” href="${webLink}">тут</a></p>
+        <p class='portfolio-item-description'>Посмотреть можно <a  target=”_blank” href="${webLink}">тут</a></p>
         <a  target=”_blank” href="${github}" class="portfolio-item-github-link">GitHub</a>
       </div>
     </div>
