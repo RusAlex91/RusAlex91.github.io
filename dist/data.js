@@ -72,7 +72,8 @@ const portfolioCases = {
       desc:
         'Валидация формы регистрации. Использованные технологии: HTML, CSS, JS',
       github: 'https://github.com/RusAlex91/1.-Register-Validator',
-      src: '../assets/portfolio/light/test.png'
+      src: '../assets/portfolio/light/test.png',
+      webLink: 'https://rusalex91.github.io/projects/heavy/find-a-god/'
     },
     2: {
       id: 2,
