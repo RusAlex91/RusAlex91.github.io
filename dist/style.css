@@ -5,7 +5,7 @@ html {
 /* main */
 
 body {
-  background-image: url('./assets/bg-2k.png');
+  background-image: url('../assets/bg-2k.png');
   background-repeat: no-repeat;
   max-height: 1050px;
   max-width: 1900px;

@@ -187,7 +187,7 @@ const portfolioCreation = {
     const template = `<div id="portfolio-${id}" class="portfolio-item">
     <div class="text-editor-wrapper">
       <img
-        src="./assets/Windows-98-Notepad.png"
+        src="../assets/Windows-98-Notepad.png"
         alt=""
         width="600px"
       />
