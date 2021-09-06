@@ -25,8 +25,7 @@ const controls = {
         document
           .getElementsByClassName('contact-wrapper')[0]
           .classList.toggle('hidden-d')
-
-        document.getElementsByClassName('memes')[0].classList.add('hidden-d')
+        controls.togglePortfolioWindow()
       })
   },
   togglePortfolio: function () {
@@ -66,10 +65,14 @@ const controls = {
       animationState = true
     }
   },
-  toggleMainPortfolioControls: function () {
-    document
-      .getElementsByClassName('projects-category')[0]
-      .classList.toggle('hidden-d')
+  toggleMainPortfolioControls: function (created) {
+    const projects = document.getElementsByClassName('projects-category')[0]
+      .classList
+    if (created) {
+      projects.add('hidden-d')
+    } else {
+      projects.remove('hidden-d')
+    }
 
     document
       .getElementsByClassName('project-heavy-sub-category')[0]
@@ -171,9 +174,10 @@ const portfolioCreation = {
       Object.keys(portfolioCases[category]).length
     ) {
       controls.toggleSubPortfolioControls(category)
-      controls.toggleMainPortfolioControls()
+      controls.toggleMainPortfolioControls(true)
       return
     }
+
     subCategory.classList.toggle('hidden-d')
 
     const figure = document.createElement('figure')
@@ -191,7 +195,7 @@ const portfolioCreation = {
 
     subCategory.appendChild(figure)
 
-    controls.toggleMainPortfolioControls()
+    controls.toggleMainPortfolioControls(true)
 
     figure.addEventListener('click', function (e) {
       portfolioCreation.createPortfolioItem(
@@ -212,6 +216,7 @@ const portfolioCreation = {
         src="../assets/Windows-98-Notepad.png"
         alt=""
         width="600px"
+        
       />
       <div class="text-editor-text-wrapper">
         <h3 class="portfolio-item-title">

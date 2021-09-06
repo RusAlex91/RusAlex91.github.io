@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+#player {
+	position: absolute;
+	top: 50px;
+	left: 20px;
+	background: #FC0;
+	width: 50px;
+	height: 50px;
+}
+#thing1 {
+	position: absolute;
+	top: 75px;
+	left: 200px;
+	background: #06C;
+	width: 250px;
+	height: 250px;
+}
+</style>
+<script>
+// Initialize some variables that our program will use
+var reqID, dir;
+var p, t, pw, ph, px, py, tw, th, tx, ty;
+ var downKeys = new Set()
+// This function will be set to repeat very fast
+function detectCollisions(){
+	// Access the current location and dimension of both objects
+	pw = p.offsetWidth;
+	ph = p.offsetHeight;
+	px = p.offsetLeft;
+	py = p.offsetTop;
+	tw = t.offsetWidth;
+	th = t.offsetHeight;
+	tx = t.offsetLeft;
+	ty = t.offsetTop;
+
+	// Check to see if player has intersected with thing1 in any direction
+	if((px+pw) > tx && px < (tx+tw) && (py+ph) > ty && py < (ty+th)){
+		// Do anything you want in the program when collision is detected
+		stopAnimation()
+	}
+	// This makes the detectCollisions() function repeat very quickly
+	window.requestAnimationFrame(detectCollisions);
+}
+// This function simply changes the direction the object will move
+function changeDir(d) {
+	dir = d;
+}
+// This function moves the player(thing1)
+function startAnimation() {
+	if( dir == "right" ) {
+		p.style.left = (p.offsetLeft += 2) + 'px';
+	} else if( dir == "left" ) {
+		p.style.left = (p.offsetLeft -= 2) + 'px';
+	} else if ( dir == "top") {
+    p.style.top = (p.offsetTop -= 2) + "px";
+  }
+  else if ( dir == "bottom") {
+    p.style.top = (p.offsetTop += 2) + "px";
+  }
+  else if (dir == "down-right") {
+    p.style.top = (p.offsetTop += 2) + "px";
+    p.style.left = (p.offsetLeft += 2) + 'px';
+  }
+	reqID = window.requestAnimationFrame(startAnimation);
+}
+function stopAnimation() {
+	window.cancelAnimationFrame(reqID);
+}
+// The window load event fires this function
+// This function is where you get everything ready in the program after document is fully loaded
+function docReady(){
+	// Get object references for elements we are scripting against
+	p = document.getElementById("player");
+	t = document.getElementById("thing1");
+	// Start up the collision detection function
+	detectCollisions();
+}
+// The window load event listener
+window.addEventListener("load", docReady);
+   document.addEventListener("keydown", event => downKeys.add(event.key));
+  function update() {
+if (downKeys.has("ArrowDown")){
+changeDir('bottom');
+startAnimation();
+window.requestAnimationFrame(update)
+}}
+  window.requestAnimationFrame(update)
+</script>
+</head>
+<body>
+<div id="player"></div>
+<div id="thing1"></div>
+<button onmousedown="changeDir('left'); startAnimation()" onmouseup="stopAnimation()">Left</button>
+<button onmousedown="changeDir('right'); startAnimation()" onmouseup="stopAnimation()">Right</button>
+  <button onmousedown="changeDir('top'); startAnimation()" onmouseup="stopAnimation()">top</button>
+  <button onmousedown="changeDir('bottom'); startAnimation()" onmouseup="stopAnimation()">bottom</button>
+    <button onmousedown="changeDir('down-right'); startAnimation()" onmouseup="stopAnimation()">bottom-right</button>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d6ec7a5d-5c6d-404a-b2b8-73c26b5b7269" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="ProjectId" id="1SDDgm8n16bLrJ1Lh73F5gKvF0f" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
+    <property name="last_opened_file_path" value="D:/NodeJS-Course/notes-app" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.Main-Clear.html">
+    <configuration name="Unnamed" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" nameIsGenerated="true" port="9229" restartOnDisconnect="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="FirefoxRemoteDebugType" nameIsGenerated="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Main-Clear.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Clean/Main-Clear.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Attach to Node.js/Chrome.Unnamed" />
+      <item itemvalue="Firefox Remote.Unnamed" />
+      <item itemvalue="JavaScript Debug.Main-Clear.html" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.Main-Clear.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d6ec7a5d-5c6d-404a-b2b8-73c26b5b7269" name="Default Changelist" comment="" />
+      <created>1571089385603</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571089385603</updated>
+      <workItem from="1571089387781" duration="1779000" />
+      <workItem from="1571091186307" duration="200000" />
+      <workItem from="1571091394845" duration="262000" />
+      <workItem from="1571091665452" duration="207000" />
+      <workItem from="1571091880546" duration="424000" />
+      <workItem from="1571092314155" duration="372000" />
+      <workItem from="1571154853275" duration="279000" />
+      <workItem from="1571235910036" duration="693000" />
+      <workItem from="1571237201744" duration="2000" />
+      <workItem from="1571255346277" duration="2526000" />
+      <workItem from="1571273645917" duration="777000" />
+      <workItem from="1571325915341" duration="13000" />
+      <workItem from="1571490448109" duration="4155000" />
+      <workItem from="1571817582383" duration="7000" />
+      <workItem from="1572427291392" duration="2000" />
+      <workItem from="1572430204414" duration="2000" />
+      <workItem from="1573127701408" duration="564000" />
+      <workItem from="1573837633564" duration="7000" />
+      <workItem from="1574788829453" duration="7000" />
+      <workItem from="1575126182889" duration="1000" />
+      <workItem from="1575731150917" duration="10000" />
+      <workItem from="1577035782160" duration="1000" />
+      <workItem from="1577185397652" duration="73000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

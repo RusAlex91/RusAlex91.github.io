@@ -400,7 +400,7 @@ body {
   box-shadow: inset -0.0625rem -0.0625rem #fff,
     inset 0.0625rem 0.0625rem rgb(255, 255, 255),
     inset -0.125rem -0.125rem #dfdfdf, inset 0.125rem 0.125rem #0a0a0a;
-  height: 23.4375rem;
+  height: 28.4375rem;
   width: 22.1875rem;
   transition: all 0.1s;
 }

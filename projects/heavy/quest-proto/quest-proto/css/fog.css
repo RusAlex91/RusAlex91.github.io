@@ -1,0 +1,44 @@
+/* Туман */
+.fog {
+  opacity: 0;
+  position: fixed;
+  width: 20%;
+}
+
+.fog1  {
+  width: 50%;
+  animation: fog-animation-1 40s linear infinite;
+  animation-delay: 2s;
+}
+
+.fog2 {
+  width: 80%;
+  animation: fog-animation-2 30s linear infinite;
+  animation-delay: 4s;
+}
+
+.fog3 {
+  width: 100%;
+  animation: fog-animation-3 50s linear infinite;
+  animation-delay: 0;
+}
+
+@keyframes pulse {
+    0%, 100%   { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@keyframes fog-animation-1 {
+    0%   { top: -50%; left: -80%; opacity: 0.1; }
+    100% { top:  50%; left: 100%; }
+}
+
+@keyframes fog-animation-2 {
+    0%   { top:  50%; left: -50%; opacity: 0.1; }
+    100% { top: -50%; left: 100%; }
+}
+
+@keyframes fog-animation-3 {
+    0%   { top: 0; left: -60%; opacity: 0.2; }
+    100% { top:  50%; left: 120%; }
+}

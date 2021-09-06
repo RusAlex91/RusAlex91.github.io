@@ -1,0 +1,21 @@
+.heaven {
+  background-image: url('../../img/heaven-1920.png');
+  background-repeat: no-repeat;
+  transition: all 1s;
+  opacity: 1;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#monitor {
+  opacity: 0;
+}
+
+#monitor-text {
+  opacity: 0;
+}
+
+#monitor-inventory {
+  opacity: 0;
+}
