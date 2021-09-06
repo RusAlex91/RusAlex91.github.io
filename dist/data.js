@@ -16,15 +16,16 @@ const portfolioCases = {
         'Фановый проект по воссозданию страницы из старого интернета. Использованные технологии: HTML, CSS, JS',
       github: 'https://github.com/RusAlex91/OldWeb',
       src: '../assets/portfolio/light/Oldweb.gif',
-      webLink: 'https://rusalex91.github.io/projects/lite/oldweb'
+      webLink: 'https://rusalex91.github.io/projects/lite/old-web'
     },
     3: {
       id: 3,
-      name: 'Register Validator 3',
+      name: 'Register Validator',
       desc:
-        'Валидация формы регистрации. Использованные технологии: HTML, CSS, JS test 2',
+        'Валидация формы регистрации. Использованные технологии: HTML, CSS, JS ',
       github: 'https://github.com/RusAlex91/1.-Register-Validator',
-      src: '../assets/portfolio/light/test.png'
+      src: '../assets/portfolio/light/validator.gif',
+      webLink: 'https://rusalex91.github.io/projects/lite/register-validator'
     }
   },
   medium: {

@@ -25,7 +25,28 @@ const controls = {
         document
           .getElementsByClassName('contact-wrapper')[0]
           .classList.toggle('hidden-d')
-        controls.togglePortfolioWindow()
+
+        document.getElementsByClassName('memes')[0].classList.add('hidden-d')
+      })
+  },
+  togglePortfolio: function () {
+    document
+      .getElementsByClassName('contact-wrapper')[0]
+      .classList.add('hidden-d')
+    document.getElementsByClassName('memes')[0].classList.add('hidden-d')
+    controls.togglePortfolioWindow()
+  },
+  toggleMeme: function () {
+    document
+      .getElementsByClassName('full-folder')[0]
+      .addEventListener('click', function () {
+        document.getElementsByClassName('pop-up')[0].classList.add('hidden-d')
+
+        document
+          .getElementsByClassName('contact-wrapper')[0]
+          .classList.add('hidden-d')
+
+        document.getElementsByClassName('memes')[0].classList.toggle('hidden-d')
       })
   },
   toggleCRT: function () {
@@ -79,6 +100,7 @@ const controls = {
 
 controls.toggleContacts()
 controls.toggleCRT()
+controls.toggleMeme()
 
 const animations = {
   folderLoading: function (category) {

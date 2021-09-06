@@ -16,6 +16,9 @@
   </head>
 
   <body class="">
+    <span class="media-mobile">Увы, не адаптировано для мобильных версий</span>
+
+    <div class="black-pitch"></div>
     <div class="crt main">
       <div class="header">
         <div class="header-wrapper">
@@ -65,7 +68,7 @@
               />
               <span>Связаться со мной</span>
             </div>
-            <div class="icons-item">
+            <div class="icons-item full-folder">
               <img
                 src="../assets/icons/directory_open.png"
                 alt="Папка"
@@ -102,6 +105,7 @@
                     <div class="pseudo-panel">
                       <button
                         onclick="controls.toggleMainPortfolioControls(), controls.showPortfolioItem()"
+                        class="file-btn"
                       >
                         File
                       </button>
@@ -166,7 +170,7 @@
             <form class="">
               <input type="email" class="" placeholder="Email" />
               <textarea class="" placeholder="Message"></textarea>
-              <button class="">SEND</button>
+              <button type="button" class="email-btn">SEND</button>
             </form>
           </div>
           <div class="phone">
@@ -187,6 +191,10 @@
             </div>
           </div>
         </div>
+
+        <div class="memes hidden-d">
+          <img class="memes-img" src="/assets/meme.jpg" alt="" />
+        </div>
       </div>
     </div>
     <script src="../dist/main.js"></script>
@@ -201,13 +209,55 @@
         agent.show()
         agent.moveTo(800, 400)
         agent.play('GestureRight')
-        agent.speak('Штош предлагаю начать откуда-то отсюда')
-
-        document
-          .getElementsByClassName('computer')[0]
-          .addEventListener('click', function name (params) {
-            agent.speak('Сасай')
-          })
+        agent.speak('Предлагаю начать откуда-то отсюда')
+        setTimeout(function () {
+          agent.moveTo(300, 400)
+          agent.speak('Можете включить эффекты нажав на диск ')
+        }, 10000)
+        const clipMovements = {
+          email: function () {
+            document
+              .getElementsByClassName('email-btn')[0]
+              .addEventListener('click', function name (params) {
+                agent.speak('Она не работает, лучше перейдите по ссылкам ниже')
+              })
+          },
+          computer: function () {
+            document
+              .getElementsByClassName('computer')[0]
+              .addEventListener('click', function name (params) {
+                agent.moveTo(300, 400)
+                agent.speak('Можете включить эффекты нажав на диск ')
+                agent.play('GetWizardy')
+              })
+          },
+          portfolio: function () {
+            document
+              .getElementsByClassName('briefcase')[0]
+              .addEventListener('click', function name (params) {
+                agent.moveTo(350, 250)
+                controls.togglePortfolio()
+                agent.play('CheckingSomething')
+              })
+          },
+          clipHint: function () {
+            setTimeout(function () {
+              agent.moveTo(500, 200)
+              agent.speak('Нажав на эту кнопку вернетесь в главный каталог')
+              agent.play('GetAttention')
+              document.getElementsByClassName('file-btn')[0].style.animation =
+                'flickering 1s infinite'
+            }, 25000)
+            setTimeout(function () {
+              document.getElementsByClassName('file-btn')[0].style.animation =
+                ''
+            }, 30000)
+          }
+        }
+        clipMovements.email()
+        clipMovements.computer()
+        clipMovements.portfolio()
+        clipMovements.clipHint()
       })
     </script>
   </body>
