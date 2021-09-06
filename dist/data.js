@@ -16,7 +16,7 @@ const portfolioCases = {
         'Фановый проект по воссозданию страницы из старого интернета. Использованные технологии: HTML, CSS, JS',
       github: 'https://github.com/RusAlex91/OldWeb',
       src: '../assets/portfolio/light/Oldweb.gif',
-      webLink: 'https://rusalex91.github.io/projects/lite/old-web'
+      webLink: 'https://rusalex91.github.io/projects/lite/old-web/'
     },
     3: {
       id: 3,
@@ -25,7 +25,7 @@ const portfolioCases = {
         'Валидация формы регистрации. Использованные технологии: HTML, CSS, JS ',
       github: 'https://github.com/RusAlex91/1.-Register-Validator',
       src: '../assets/portfolio/light/validator.gif',
-      webLink: 'https://rusalex91.github.io/projects/lite/register-validator'
+      webLink: 'https://rusalex91.github.io/projects/lite/register-validator/'
     },
     4: {
       id: 4,
@@ -34,7 +34,7 @@ const portfolioCases = {
         'Фановый проект по созданию рандомной песни группы "Король и шут". Использованные технологии: HTML, CSS, JS ',
       github: 'https://github.com/RusAlex91/2.-Kish-Generator',
       src: '../assets/portfolio/light/kish.jpg',
-      webLink: 'https://rusalex91.github.io/projects/lite/kish-song-gen'
+      webLink: 'https://rusalex91.github.io/projects/lite/kish-song-gen/'
     },
     5: {
       id: 5,
@@ -43,7 +43,7 @@ const portfolioCases = {
         'Бронирование билетов и выбор кресла, сохраниние в Local Storage. Использованные технологии: HTML, CSS, JS ',
       github: 'https://github.com/RusAlex91/3.-Movie-seat-booking',
       src: '../assets/portfolio/light/movieSeat.gif',
-      webLink: 'https://rusalex91.github.io/projects/lite/movie-seat'
+      webLink: 'https://rusalex91.github.io/projects/lite/movie-seat/'
     },
     6: {
       id: 6,
@@ -61,7 +61,7 @@ const portfolioCases = {
         'Расчет обмена валют. Используется Exchange Rate API. Использованные технологии: HTML, CSS, JS ',
       github: 'https://github.com/RusAlex91/5.-Exchange-rate',
       src: '../assets/portfolio/light/exchange-rate.gif',
-      webLink: 'https://rusalex91.github.io/projects/lite/exchange-rate'
+      webLink: 'https://rusalex91.github.io/projects/lite/exchange-rate/'
     },
     8: {
       id: 8,
@@ -70,7 +70,7 @@ const portfolioCases = {
         'Мобильный cборник новостей с сайта New York Times с использованием их же API. Использованные технологии: HTML, CSS, JS ',
       github: 'https://github.com/RusAlex91/6.-Express-News',
       src: '../assets/portfolio/light/express-news.gif',
-      webLink: 'https://rusalex91.github.io/projects/lite/express-news'
+      webLink: 'https://rusalex91.github.io/projects/lite/express-news/'
     },
     9: {
       id: 9,
@@ -79,7 +79,7 @@ const portfolioCases = {
         'Обычное выезжающее меню на CSS и модальное окно. Использованные технологии: HTML, CSS, JS ',
       github: 'https://github.com/RusAlex91/8.-Css-menu',
       src: '../assets/portfolio/light/css-menu.gif',
-      webLink: 'https://rusalex91.github.io/projects/lite/css-menu'
+      webLink: 'https://rusalex91.github.io/projects/lite/css-menu/'
     },
     10: {
       id: 10,
@@ -88,7 +88,7 @@ const portfolioCases = {
         'Нахождение рецепта по названию. Работа с API, реализация случайного меню. Использованные технологии: HTML, CSS, JS ',
       github: 'https://github.com/RusAlex91/9.Meal-Finder',
       src: '../assets/portfolio/light/meal-finder.gif',
-      webLink: 'https://rusalex91.github.io/projects/lite/meal-finder'
+      webLink: 'https://rusalex91.github.io/projects/lite/meal-finder/'
     },
     11: {
       id: 11,
@@ -97,7 +97,7 @@ const portfolioCases = {
         'Реализация выбора клипов топ 32 с помощью youtube API. Использованные технологии: HTML, CSS, JS, SCSS ',
       github: 'https://github.com/RusAlex91/11.-Your-top-chart',
       src: '../assets/portfolio/light/top-chart.gif',
-      webLink: 'https://rusalex91.github.io/projects/lite/top-chart'
+      webLink: 'https://rusalex91.github.io/projects/lite/top-chart/'
     },
     12: {
       id: 12,
@@ -106,7 +106,7 @@ const portfolioCases = {
         'Бесконечный блог (JSON placeholder) с подгрузкой и поиском по прогруженным блогам. Использованные технологии: HTML, CSS, JS, TS, SCSS ',
       github: 'https://github.com/RusAlex91/12.-Infinite-scroll-blog',
       src: '../assets/portfolio/light/infinite-scroll-blog.gif',
-      webLink: 'https://rusalex91.github.io/projects/lite/infinite-scroll-blog'
+      webLink: 'https://rusalex91.github.io/projects/lite/infinite-scroll-blog/'
     },
     13: {
       id: 13,
@@ -115,7 +115,7 @@ const portfolioCases = {
         'Тестирование соприкосновения блоков. Использованные технологии: HTML, CSS, JS ',
       github: 'https://github.com/RusAlex91/collision-proto',
       src: '../assets/portfolio/light/collision-proto.gif',
-      webLink: 'https://rusalex91.github.io/projects/lite/collision-proto'
+      webLink: 'https://rusalex91.github.io/projects/lite/collision-proto/'
     }
   },
   medium: {
@@ -127,7 +127,7 @@ const portfolioCases = {
         'Лендинг по продаже мёда, выполнен в киберпанк стиле. Адаптирован только под 1920х1080. Использованные технологии: HTML, CSS, JS ',
       github: 'https://github.com/RusAlex91/cyber-bee-no-vue',
       src: '../assets/portfolio/medium/cyber-bee.gif',
-      webLink: 'https://rusalex91.github.io/projects/lite/cyber-bee'
+      webLink: 'https://rusalex91.github.io/projects/lite/cyber-bee/'
     },
     2: {
       id: 2,
@@ -136,7 +136,7 @@ const portfolioCases = {
         'Прототип лендинга с ответами на вопросы к собеседованиям. Адаптирован только под 1920х1080. Использованные технологии: HTML, CSS, JS',
       github: 'https://github.com/RusAlex91/Frontend-Answers',
       src: '../assets/portfolio/medium/frontend-answers.gif',
-      webLink: 'https://rusalex91.github.io/projects/lite/frontend-answers'
+      webLink: 'https://rusalex91.github.io/projects/lite/frontend-answers/'
     }
   },
   heavy: {
@@ -165,7 +165,7 @@ const portfolioCases = {
         'Прототип квеста с колиженом объектов. Анимацией и Drag and Drop.<br>Технологии: HTML, CSS, JS',
       github: 'https://github.com/RusAlex91/quest-prototype',
       src: '../assets/portfolio/heavy/quest-prototype.gif',
-      webLink: 'https://rusalex91.github.io/projects/heavy/quest-prototype'
+      webLink: 'https://rusalex91.github.io/projects/heavy/quest-prototype/'
     },
     4: {
       id: 4,
@@ -184,7 +184,7 @@ const portfolioCases = {
         'Прототип стратегической игры. Реализован базовый движок игры.<br>Технологии: HTML, CSS, JS',
       github: 'https://github.com/RusAlex91/castle-story-proto',
       src: '../assets/portfolio/heavy/castle-story-proto.gif',
-      webLink: 'https://rusalex91.github.io/projects/heavy/castle-story-proto'
+      webLink: 'https://rusalex91.github.io/projects/heavy/castle-story-proto/'
     },
     6: {
       id: 6,
@@ -193,7 +193,7 @@ const portfolioCases = {
         'Прототип/вебремейк стратегической игры. Реализован движок игры.<br>Технологии: HTML, CSS, JS',
       github: 'https://github.com/RusAlex91/Tzar-Burden',
       src: '../assets/portfolio/heavy/tzar.gif',
-      webLink: 'https://rusalex91.github.io/projects/heavy/tzar'
+      webLink: 'https://rusalex91.github.io/projects/heavy/tzar/'
     }
   }
 }
