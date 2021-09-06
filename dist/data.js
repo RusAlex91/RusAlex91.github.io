@@ -52,7 +52,7 @@ const portfolioCases = {
         'Простой плеер с переключением качества картинки. Использованные технологии: HTML, CSS, JS ',
       github: 'https://github.com/RusAlex91/4.-Custom-video-Player',
       src: '../assets/portfolio/light/custom-video-player.gif',
-      webLink: 'https://rusalex91.github.io/projects/lite/custom-video-player'
+      webLink: 'https://rusalex91.github.io/projects/lite/custom-video-player/'
     },
     7: {
       id: 7,
