@@ -127,7 +127,7 @@ const portfolioCases = {
         'Лендинг по продаже мёда, выполнен в киберпанк стиле. Адаптирован только под 1920х1080. Использованные технологии: HTML, CSS, JS ',
       github: 'https://github.com/RusAlex91/cyber-bee-no-vue',
       src: '../assets/portfolio/medium/cyber-bee.gif',
-      webLink: 'https://rusalex91.github.io/projects/lite/cyber-bee/'
+      webLink: 'https://rusalex91.github.io/projects/medium/cyber-bee/'
     },
     2: {
       id: 2,
@@ -136,7 +136,7 @@ const portfolioCases = {
         'Прототип лендинга с ответами на вопросы к собеседованиям. Адаптирован только под 1920х1080. Использованные технологии: HTML, CSS, JS',
       github: 'https://github.com/RusAlex91/Frontend-Answers',
       src: '../assets/portfolio/medium/frontend-answers.gif',
-      webLink: 'https://rusalex91.github.io/projects/lite/frontend-answers/'
+      webLink: 'https://rusalex91.github.io/projects/medium/frontend-answers/'
     }
   },
   heavy: {
