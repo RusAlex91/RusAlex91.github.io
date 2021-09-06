@@ -1,0 +1,234 @@
+body {
+   font-size:62.5%;
+   background-color: black;
+   color:white;
+}
+.inventory {
+  width: 28.7rem;
+  height: 29rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.inventory div {
+  width: 10rem;
+  border: 2px solid red;
+}
+.DropItem {
+  width: 14rem;
+  border: 2px solid green;
+  height: 9.6rem;
+
+}
+.wrapper {
+  display: flex;
+
+}
+
+.quest-text {
+  display: flex;
+  margin-left: 7rem;
+  flex-direction: column;
+}
+
+.main-text {
+  height: 10rem;
+  width: 30rem;
+  border: 2px solid white;
+  font-size: 1.3rem;
+}
+
+.wrapper-choices {
+  display:flex;
+  flex-direction: column;
+  border: 2px solid blue;
+}
+
+.house {
+  height: 671px;
+  width: 587px;
+  border: 2px solid orange;
+  background-image: url("img/house.png");
+  position:relative;
+}
+
+.house img {
+  position:absolute;
+
+}
+.fireplace {
+  left: 162px;
+  top:40px;
+
+}
+
+.animation {
+  left: 200px;
+  top: 560px;
+  transition: 3s;
+  transition-timing-function: linear;
+  height: 159px;
+  width: 80px;
+}
+/* .aminwrap {
+  position: relative;
+
+} */
+.emotion {
+  position: absolute;
+  left: 190px;
+  top: 160px;
+  opacity: 0;
+}
+
+.test1 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid blue;
+  top: 500px;
+  left: 100px;
+}
+
+.test2 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid blue;
+  top: 350px;
+  left: 100px;
+}
+
+.test3 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid blue;
+  top: 580px;
+  left: 480px;
+}
+
+.test4 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid blue;
+  top: 210px;
+  left: 180px;
+}
+
+.test {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid blue;
+  left: 224px;
+  top: 250px;
+}
+
+.work-table {
+  position: absolute;
+  left: 335px;
+  top: 110px;
+}
+
+.cupboard {
+
+  position: absolute;
+  left: 480px;
+  top: 92px;
+}
+
+.chair-top {
+  position: absolute;
+  left: 370px;
+  top: 165px;
+
+}
+
+.collision {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 195px;
+  top: 332px;
+  border: 2px solid red;
+}
+
+.target {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid green;
+  top: 600px;
+  left: 250px;
+}
+.carpet {
+  position: absolute;
+  left: 195px;
+  top: 332px;
+
+}
+
+
+.shadows {
+  position: absolute;
+  left: 0px;
+  top: 20px;
+}
+
+.lamp {
+
+}
+
+.bed {
+
+}
+
+.pedestal {
+
+}
+
+.chair_dinner-top {
+  position: absolute;
+  left: 209px;
+  top: 353px;
+}
+
+.chair_dinner-bottom {
+  position: absolute;
+  left: 209px;
+  top: 415px;
+}
+
+.chair_dinner-right {
+  position: absolute;
+  left: 302px;
+  top: 352px;
+}
+
+.wooden_crate {
+  position: absolute;
+  left: 236px;
+  top: 400px;
+}
+
+.dinner_table {
+  position: absolute;
+  left: 223px;
+  top: 323px;
+}
+
+.spinning_weel {
+
+}
+
+.spinning_weel_chair {
+
+}
+
+.shadows_dinner_table {
+  position: absolute;
+  left: 213px;
+  top: 370px;
+
+}

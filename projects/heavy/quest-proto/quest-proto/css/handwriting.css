@@ -1,0 +1,146 @@
+.fancy_title.image-wrapper {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.fancy_title.image-wrapper img {
+  display: block;
+}
+
+#handwriting {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0;
+  height: 100px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+#handwriting p {
+  width: 100%;
+  font-size: 20px;
+  text-align: left;
+  color: white;
+  margin-top: -40px;
+  -webkit-animation: fadeInLeft 5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeInLeft 5s;
+  /* Firefox < 16 */
+  -ms-animation: fadeInLeft 5s;
+  /* Internet Explorer */
+  -o-animation: fadeInLeft 5s;
+  /* Opera < 12.1 */
+  animation: fadeInLeft 5s;
+}
+
+#handwriting canvas {
+  font-size: 20px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Amatic SC';
+}
+
+.canvas {
+  position: absolute;
+}
+
+#canvas1 {
+  top: 120px;
+}
+
+#canvas2 {
+  top: 180px;
+}
+
+#canvas3 {
+  top: 240px;
+}
+
+#canvas4 {
+  top: 300px;
+}
+
+#canvas5 {
+  top: 360px;
+}
+#canvas6 {
+  top: 420px;
+}
+#canvas7 {
+  top: 480px;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}

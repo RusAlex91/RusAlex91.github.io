@@ -1,0 +1,782 @@
+body {
+    background: black;
+}
+
+.battlefield {}
+
+.create-unit {
+    margin-top: 60px;
+}
+
+.ally_army_spot {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    left: 550px;
+    top: 600px;
+}
+
+.interface-top {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    width: 1505px;
+    height: 120px;
+    margin-left: 150px;
+    background-image: url("interface/lefttop.png");
+    background-repeat: no-repeat;
+}
+
+.interface-left {
+    position: fixed;
+    top: 0;
+    float: left;
+    z-index: 2;
+    width: 180px;
+    height: 2080px;
+    background-image: url("interface/leftmain.png");
+    background-repeat: no-repeat;
+}
+
+.sub-controls {
+    display: flex;
+    position: fixed;
+    top: 302px;
+}
+
+.sub-controls_right {
+    position: relative;
+    left: 50px;
+}
+
+.sub-controls_eye {
+    position: relative;
+    left: 38px;
+}
+
+.sub-controls_left {
+    position: relative;
+    left: 25px;
+}
+
+.sub-controls_left-img_inactive {
+    content: url("icons/interface-btn-left-inactive.png");
+}
+
+.sub-controls_right-img_inactive {
+    content: url("icons/interface-btn-right-inactive.png");
+}
+
+.sub-controls_left-img_active {
+    content: url("icons/interface-btn-left-active.png");
+}
+
+.sub-controls_right-img_active {
+    content: url("icons/interface-btn-right-active.png");
+}
+
+.sub-controls_left-img_active:hover {
+    content: url("icons/interface-btn-left-hover.png");
+}
+
+.sub-controls_right-img_active:hover {
+    content: url("icons/interface-btn-right-hover.png");
+}
+
+.sub-controls_eye-img_inactive {
+    content: url("icons/eye-inactive.png");
+}
+
+.sub-controls_eye-img_active {
+    content: url("icons/eye-active.png");
+}
+
+.sub-controls_eye-img_active:hover {
+    content: url("icons/eye-hover.png");
+}
+
+.sub-controls_eye-img_active:active {
+    content: url("icons/eye-clicked.png");
+}
+
+.disableHover {
+    pointer-events: none;
+}
+
+
+/* .fire-minimap-replacer img {
+    position: fixed;
+    width: 150px;
+    height: 150px;
+} */
+
+
+/* .interface-right {
+    position: relative;
+    float: right;
+    left: 109px;
+    z-index: 2;
+    width: 248px;
+    height: 1180px;
+    background-image: url("backBG.png");
+    background-repeat: no-repeat;
+} */
+
+.icon-spot-1 {
+    position: absolute;
+    top: 336px;
+    left: 19px;
+}
+
+.icon-spot-2 {
+    position: absolute;
+    top: 336px;
+    left: 81px;
+}
+
+.icon-spot-3 {
+    position: absolute;
+    top: 392px;
+    left: 19px;
+}
+
+.icon-spot-4 {
+    position: absolute;
+    top: 392px;
+    left: 81px;
+}
+
+.icon-spot-5 {
+    position: absolute;
+    top: 448px;
+    left: 19px;
+}
+
+.icon-spot-6 {
+    position: absolute;
+    top: 448px;
+    left: 81px;
+}
+
+.icon-spot-7 {
+    position: absolute;
+    top: 506px;
+    left: 19px;
+}
+
+.icon-spot-8 {
+    position: absolute;
+    top: 506px;
+    left: 81px;
+}
+
+.castle-interface {
+    position: relative;
+    top: 336px;
+    left: 19px;
+}
+
+.counter {
+    position: absolute;
+    color: whitesmoke;
+    font-size: 40px;
+    opacity: 0.9;
+    /* -webkit-text-stroke: 1px gray; */
+}
+
+.count-footman,
+.build-count-footman {
+    left: 6px;
+}
+
+.count-archer,
+.build-count-archer {
+    left: 66px;
+}
+
+.count-maceman,
+.build-count-maceman {
+    top: 55px;
+    left: 6px;
+}
+
+.count-longbowman,
+.build-count-longbowman {
+    top: 55px;
+    left: 66px;
+}
+
+.build-counter {
+    position: absolute;
+    color: whitesmoke;
+    font-size: 20px;
+    opacity: 0.9;
+    /* -webkit-text-stroke: 1px gray; */
+}
+
+.build-count-footman {
+    left: 6px;
+}
+
+.build-count-archer {
+    left: 66px;
+}
+
+.build-count-maceman {
+    top: 55px;
+    left: 6px;
+}
+
+.build-count-longbowman {
+    top: 55px;
+    left: 66px;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+}
+
+.disabled {
+    filter: grayscale(100%);
+    pointer-events: none;
+    ;
+}
+
+.barracks-interface {
+    position: relative;
+    top: 336px;
+    left: 19px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tier-1 {}
+
+.tier-2 {}
+
+.tier-1-castle img:first-child {
+    position: absolute;
+    top: 0px;
+    opacity: 0.7;
+}
+
+.tier-1-castle img:nth-child(3) {
+    position: absolute;
+    left: 62px;
+    opacity: 0.7;
+}
+
+.tier-2-castle img:first-child {
+    position: absolute;
+    top: 57px;
+    opacity: 0.7;
+}
+
+.tier-2-castle img:nth-child(3) {
+    position: absolute;
+    left: 62px;
+    top: 57px;
+}
+
+.tier-1 img:first-child {
+    position: absolute;
+    top: 0px;
+}
+
+.tier-1 img:nth-child(3) {
+    position: absolute;
+    left: 62px;
+}
+
+.tier-2 img:first-child {
+    position: absolute;
+    top: 57px;
+}
+
+.tier-2 img:nth-child(3) {
+    position: absolute;
+    left: 62px;
+    top: 57px;
+}
+
+.buildings-wrapper {}
+
+.hidden {
+    /* visibility: hidden; */
+    display: none;
+}
+
+.resources {}
+
+.gold {
+    position: absolute;
+    left: 215px;
+    -webkit-user-select: none;
+}
+
+.wood {
+    position: absolute;
+    left: 315px;
+    -webkit-user-select: none;
+}
+
+.food {
+    position: absolute;
+    left: 405px;
+    -webkit-user-select: none;
+}
+
+.stone {
+    position: absolute;
+    left: 500px;
+    -webkit-user-select: none;
+}
+
+.units {
+    position: absolute;
+    left: 590px;
+    -webkit-user-select: none;
+}
+
+.gold,
+.wood,
+.stone,
+.food,
+.units {
+    width: 35px;
+    height: 15px;
+    /* border: 1px solid palegoldenrod; */
+    color: white;
+    opacity: 0.9;
+}
+
+.icon-spot-1:hover,
+.icon-spot-2:hover,
+.icon-spot-3:hover,
+.icon-spot-4:hover,
+.icon-spot-5:hover,
+.icon-spot-6:hover,
+.icon-spot-7:hover,
+.icon-spot-8:hover {
+    border: 1px solid transparent;
+}
+
+.icon-spot-1:active,
+.icon-spot-2:active,
+.icon-spot-3:active,
+.icon-spot-4:active,
+.icon-spot-5:active,
+.icon-spot-6:active,
+.icon-spot-7:active,
+.icon-spot-8:active {
+    border: 1px solid rgba(141, 139, 156, 0.8);
+}
+
+.footman-icon:hover,
+.archer-icon:hover,
+.maceman-icon:hover,
+.longbowman-icon:hover {
+    border: 1px solid transparent;
+}
+
+.footman-icon:active,
+.archer-icon:active,
+.maceman-icon:active,
+.longbowman-icon:active {
+    border: 1px solid gainsboro;
+    opacity: 0.8;
+}
+
+.footman-icon:focus,
+.archer-icon:focus,
+.maceman-icon:focus,
+.longbowman-icon:focus {
+    border: 1px solid gainsboro;
+    opacity: 0.8;
+}
+
+.wrapper-main {
+    z-index: 1;
+    position: relative;
+    padding-right: 102px;
+    padding-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.border {
+    position: relative;
+    width: 1500px;
+    height: 1600px;
+    background-image: url('new battlefild.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.battlefield {
+    min-width: 1200px;
+    width: 1200px;
+    height: 1600px;
+}
+
+.mainLands {
+    min-width: 1500px;
+    height: 1600px;
+}
+
+.vampire1_tower_enemy0 {
+    /* margin-top: 25px; */
+    height: 50px;
+    width: 27px;
+    /* 	  animation: footman_attack 1s infinite; */
+    background-image: url("ork.png");
+}
+
+.archer_attack_area {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    right: 40px;
+    border: 1px solid red;
+}
+
+.tower_attack_area {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    right: -70px;
+    top: -50px;
+    border: 1px solid red;
+}
+
+
+/* spots */
+
+.spot {}
+
+.spot0 {
+    top: 820px;
+    left: 650px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.spot0-active {
+    content: url("Buildings/EURO CASTLE-highlighted.png");
+}
+
+.spot1 {
+    top: 700px;
+    left: 290px;
+    position: absolute;
+}
+
+.spot2 {
+    top: 580px;
+    left: 820px;
+    position: absolute;
+}
+
+.spot3 {
+    top: 1000px;
+    left: 1200px;
+    position: absolute;
+}
+
+.spot4 {
+    top: 1300px;
+    left: 680px;
+    position: absolute;
+}
+
+.spot5 {
+    top: 1000px;
+    left: 380px;
+    position: absolute;
+}
+
+.spot6 {
+    top: 1000px;
+    left: 480px;
+    position: absolute;
+}
+
+.spot7 {
+    top: 1000px;
+    left: 580px;
+    position: absolute;
+}
+
+.spot8 {
+    top: 1000px;
+    left: 680px;
+    position: absolute;
+}
+
+.spot70 {
+    top: 1000px;
+    left: 980px;
+    position: absolute;
+}
+
+.spot71 {
+    top: 1000px;
+    left: 1100px;
+    position: absolute;
+}
+
+.possible-barracks {
+    content: url("Buildings/Barracks.png");
+}
+
+.possible-house {
+    content: url("Buildings/house-euro-1.png");
+}
+
+.possible-field {
+    content: url("Buildings/field/type/type-1.png");
+}
+
+.barracks-complete-highlighted {
+    content: url("Buildings/house-euro-1-highlighted.png");
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
+
+/* строительные площадки 5*5 для больших (но в игре средних) */
+
+.buildProsesessBig_stadia1 {
+    content: url("Buildings/5x5/big (1).png");
+}
+
+.buildProsesessBig_stadia2 {
+    content: url("Buildings/5x5/big (2).png");
+}
+
+.buildProsesessBig_stadia3 {
+    content: url("Buildings/5x5/big (3).png");
+}
+
+.buildProsesessBig_stadia4 {
+    content: url("Buildings/5x5/big (4).png");
+}
+
+
+/* 2на2 */
+
+.buildProsesessTiny_stadia1 {
+    content: url("Buildings/3x3/small (1).png");
+}
+
+.buildProsesessTiny_stadia2 {
+    content: url("Buildings/3x3/small (2).png");
+}
+
+.buildProsesessTiny_stadia3 {
+    content: url("Buildings/3x3/small (3).png");
+}
+
+.buildProsesessTiny_stadia4 {
+    content: url("Buildings/3x3/small (4).png");
+}
+
+
+/* уничтоженные площадки 5*5 для больших (но в игре средних) */
+
+.demolishProsesessBig_stadia1 {
+    content: url("Buildings/destroyed/5x5/big (4).png");
+}
+
+.demolishProsesessBig_stadia2 {
+    content: url("Buildings/destroyed/5x5/big (3).png");
+}
+
+.demolishProsesessBig_stadia3 {
+    content: url("Buildings/destroyed/5x5/big (2).png");
+}
+
+.demolishProsesessBig_stadia4 {
+    content: url("Buildings/destroyed/5x5/big (1).png");
+}
+
+
+/* 2на2 */
+
+.demolishProsesessTiny_stadia1 {
+    content: url("Buildings/destroyed/3x3/small (4).png");
+}
+
+.demolishProsesessTiny_stadia2 {
+    content: url("Buildings/destroyed/3x3/small (3).png");
+}
+
+.demolishProsesessTiny_stadia3 {
+    content: url("Buildings/destroyed/3x3/small (2).png");
+}
+
+.demolishProsesessTiny_stadia4 {
+    content: url("Buildings/destroyed/3x3/small (1).png");
+}
+
+
+/*  */
+
+.barracks-complete {
+    content: url("Buildings/Barracks.png");
+}
+
+.house-complete {
+    content: url("Buildings/house-euro-1.png");
+}
+
+.barracks-complete-highlighted {
+    content: url("Buildings/Barracks-highlighted.png");
+}
+
+.barracks-complete:hover {
+    cursor: pointer;
+}
+
+.house-complete:hover {
+    cursor: pointer;
+}
+
+.building-medium {}
+
+
+/* units animations */
+
+
+/* worker */
+
+
+/* day/night */
+
+.night-buildings {
+    filter: grayscale(40%);
+    filter: brightness(50%);
+    /* background-color: rgba(3, 8, 129, 0.35) */
+}
+
+.night {
+    filter: grayscale(40%);
+    filter: brightness(50%);
+}
+
+.castle-night-img {
+    z-index: 2;
+    position: absolute;
+    top: 805px;
+    left: 630px;
+}
+
+
+/* just for testing */
+
+.coordinates {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1000px;
+    background-color: red;
+}
+
+.coordinates2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: 1px;
+    background-color: blue;
+}
+
+
+/* field */
+
+.field-1 {
+    content: url("Buildings/field/type/type-1.png");
+}
+
+.field-2 {
+    content: url("Buildings/field/type/type-2.png");
+}
+
+.field-3 {
+    content: url("Buildings/field/type/type-3.png");
+}
+
+.field-4 {
+    content: url("Buildings/field/type/type-4.png");
+}
+
+.field-5 {
+    content: url("Buildings/field/type/type-5.png");
+}
+
+.field-6 {
+    content: url("Buildings/field/type/type-6.png");
+}
+
+.field-7 {
+    content: url("Buildings/field/type/type-7.png");
+}
+
+.field-8 {
+    content: url("Buildings/field/type/type-8.png");
+}
+
+.field-9 {
+    content: url("Buildings/field/type/type-9.png");
+}
+
+.buildProsesessField_stadia1 {
+    content: url("Buildings/field/grow/grow (1).png");
+}
+
+.buildProsesessField_stadia2 {
+    content: url("Buildings/field/grow/grow (2).png");
+}
+
+.buildProsesessField_stadia3 {
+    content: url("Buildings/field/grow/grow (3).png");
+}
+
+.buildProsesessField_stadia4 {
+    content: url("Buildings/field/grow/grow (4).png");
+}
+
+.gold-resourse {
+    content: url("resources/gold.png");
+    cursor: pointer;
+}
+
+.gold-resourse-active {
+    content: url("resources/gold-highlighted.png");
+    cursor: pointer;
+}
+
+.stone-resourse {
+    content: url("resources/stone.png");
+    cursor: pointer;
+}
+
+.stone-resourse-active {
+    content: url("resources/stone-highlighted.png");
+    cursor: pointer;
+}
+
+.gold-depleted {
+    content: url("resources/gold-depleted.png");
+}
+
+.stone-depleted {
+    content: url("resources/stone-depleted.png");
+}

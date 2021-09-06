@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/progress.css" rel="stylesheet" />
+    <title>Custom VP</title>
+  </head>
+
+  <body>
+    <h1>Кастомный видео плеер</h1>
+    <video
+      autoplay
+      class="screen"
+      id="video"
+      poster="img/poster.png"
+      src="videos/TestVideo720P.mp4"
+    ></video>
+    <div class="controls">
+      <button class="btn" id="play">
+        <i class="fa fa-play fa-2x"></i>
+      </button>
+      <button class="btn" id="stop">
+        <i class="fa fa-stop fa-2x"></i>
+      </button>
+      <input
+        type="range"
+        id="progress"
+        class="progress"
+        min="0"
+        max="100"
+        step="0.1"
+        value="0"
+      />
+      <span class="timestamp" id="timestamp">00:00</span>
+      <div class="quality-wrapper">
+        <div class="quality">
+          <span class="video1080" onclick="changeQuality(1080)">1080</span>
+          <span class="video720" onclick="changeQuality(720)">720</span>
+          <span class="video480" onclick="changeQuality(480)">480</span>
+          <span class="video320" onclick="changeQuality(360)">360</span>
+        </div>
+      </div>
+      <span class="change-quality fas fa-cog"></span>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

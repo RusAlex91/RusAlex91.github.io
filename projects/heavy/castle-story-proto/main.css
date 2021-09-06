@@ -1,0 +1,627 @@
+body {
+  background: black;
+}
+
+.wrapper-main {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.resourses {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.money {
+  border: 1px black solid;
+}
+
+.moneyWrapper {
+  position: relative;
+}
+
+.moneyCount {
+  font-size: 24px;
+  color: darkgoldenrod;
+  position: absolute;
+  top: 7px;
+  left: 35px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.armiesCount {
+  margin-left: 35px;
+  font-size: 24px;
+  color: darkgoldenrod;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+.people {
+  border: blue solid 2px;
+  width: 20px;
+  height: 20px;
+}
+
+.bottom-panel {
+  width: 100%;
+  border: 1px solid gray;
+  width: 1480px;
+  height: 100px;
+}
+
+.border {
+  min-width: 1200px;
+  position: relative;
+  width: 1200px;
+  height: 350px;
+  border: 2px solid gray;
+  background-color: lightgray;
+  background-image: url('bg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(30, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.farms {
+}
+
+.walls {
+  border: 2px solid black;
+  width: 15px;
+  height: 428px;
+}
+
+.empty-small {
+  border: 2px dotted black;
+  width: 50px;
+  height: 50px;
+}
+
+.empty-medium {
+  border: 2px dotted black;
+  width: 80px;
+  height: 60px;
+}
+
+.empty-wall {
+  border: 2px dotted black;
+  width: 15px;
+  height: 426px;
+}
+
+.building_site1 {
+  grid-area: 2 / 2 / 5 / 4;
+}
+
+.building_site2 {
+  grid-area: 6 / 2 / 9 / 4;
+}
+
+.building_site3 {
+  grid-area: 10 / 2 / 13 / 4;
+}
+
+.building_site4 {
+  grid-area: 3 / 5 / 8 / 8;
+}
+
+.building_site5 {
+  grid-area: 9 / 5 / 14 / 8;
+}
+
+.building_site6 {
+  grid-area: 1 / 8 / 31 / 16;
+}
+
+.building_site_farms_unbuild {
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+  margin-left: 40px;
+}
+
+.building_site1-menu,
+.building_site2-menu,
+.building_site3-menu,
+.building_site4-menu,
+.building_site5-menu {
+  display: none;
+  position: absolute;
+}
+
+.building_site1:active .building_site1-menu,
+.building_site1:focus .building_site1-menu,
+.building_site2:active .building_site2-menu,
+.building_site2:focus .building_site2-menu,
+.building_site3:active .building_site3-menu,
+.building_site3:focus .building_site3-menu,
+.building_site4:active .building_site4-menu,
+.building_site4:focus .building_site4-menu,
+.building_site5:active .building_site5-menu,
+.building_site5:focus .building_site5-menu {
+  display: block;
+}
+
+/* заграждения баррикады дервянные */
+
+.ally_army_spot {
+  position: absolute;
+  border: 1px dotted blue;
+  bottom: 100px;
+  left: 780px;
+  width: 35px;
+  height: 35px;
+}
+
+.ally_army_spot2 {
+  position: absolute;
+  border: 1px dotted blue;
+  bottom: 300px;
+  left: 780px;
+  width: 35px;
+  height: 35px;
+}
+
+/* .f_footman div:nth-child(1),
+.human_footman div:nth-child(5)
+{
+	margin-top: 0px;
+} */
+
+.farms_build,
+.farms_build2,
+.farms_build3 {
+  box-shadow: 50px 20px 0 0 rgba(249, 217, 125, 1),
+    55px 20px 0 0 rgba(249, 217, 125, 1), 45px 25px 0 0 rgba(249, 217, 125, 1),
+    50px 25px 0 0 rgba(255, 193, 7, 1), 55px 25px 0 0 rgba(255, 235, 59, 1),
+    60px 25px 0 0 rgba(249, 217, 125, 1), 40px 30px 0 0 rgba(249, 217, 125, 1),
+    45px 30px 0 0 rgba(255, 235, 59, 1), 50px 30px 0 0 rgba(255, 235, 59, 1),
+    55px 30px 0 0 rgba(255, 193, 7, 1), 60px 30px 0 0 rgba(255, 235, 59, 1),
+    65px 30px 0 0 rgba(249, 217, 125, 1), 35px 35px 0 0 rgba(249, 217, 125, 1),
+    40px 35px 0 0 rgba(255, 235, 59, 1), 45px 35px 0 0 rgba(255, 235, 59, 1),
+    50px 35px 0 0 rgba(255, 193, 7, 1), 55px 35px 0 0 rgba(255, 235, 59, 1),
+    60px 35px 0 0 rgba(255, 235, 59, 1), 65px 35px 0 0 rgba(255, 235, 59, 1),
+    70px 35px 0 0 rgba(249, 217, 125, 1), 30px 40px 0 0 rgba(249, 217, 125, 1),
+    35px 40px 0 0 rgba(255, 235, 59, 1), 40px 40px 0 0 rgba(255, 235, 59, 1),
+    45px 40px 0 0 rgba(255, 235, 59, 1), 50px 40px 0 0 rgba(255, 235, 59, 1),
+    55px 40px 0 0 rgba(255, 193, 7, 1), 60px 40px 0 0 rgba(255, 235, 59, 1),
+    65px 40px 0 0 rgba(255, 235, 59, 1), 70px 40px 0 0 rgba(255, 235, 59, 1),
+    75px 40px 0 0 rgba(249, 217, 125, 1), 25px 45px 0 0 rgba(249, 217, 125, 1),
+    30px 45px 0 0 rgba(96, 125, 139, 1), 35px 45px 0 0 rgba(96, 125, 139, 1),
+    40px 45px 0 0 rgba(96, 125, 139, 1), 45px 45px 0 0 rgba(96, 125, 139, 1),
+    50px 45px 0 0 rgba(96, 125, 139, 1), 55px 45px 0 0 rgba(96, 125, 139, 1),
+    60px 45px 0 0 rgba(96, 125, 139, 1), 65px 45px 0 0 rgba(96, 125, 139, 1),
+    70px 45px 0 0 rgba(96, 125, 139, 1), 75px 45px 0 0 rgba(96, 125, 139, 1),
+    80px 45px 0 0 rgba(249, 217, 125, 1), 25px 50px 0 0 rgba(96, 125, 139, 1),
+    30px 50px 0 0 rgba(166, 166, 166, 1), 35px 50px 0 0 rgba(158, 158, 158, 1),
+    40px 50px 0 0 rgba(158, 158, 158, 1), 45px 50px 0 0 rgba(158, 158, 158, 1),
+    50px 50px 0 0 rgba(166, 166, 166, 1), 55px 50px 0 0 rgba(166, 166, 166, 1),
+    60px 50px 0 0 rgba(166, 166, 166, 1), 65px 50px 0 0 rgba(166, 166, 166, 1),
+    70px 50px 0 0 rgba(166, 166, 166, 1), 75px 50px 0 0 rgba(158, 158, 158, 1),
+    80px 50px 0 0 rgba(96, 125, 139, 1), 25px 55px 0 0 rgba(96, 125, 139, 1),
+    30px 55px 0 0 rgba(166, 166, 166, 1), 35px 55px 0 0 rgba(24, 31, 34, 1),
+    40px 55px 0 0 rgba(24, 31, 34, 1), 45px 55px 0 0 rgba(24, 31, 34, 1),
+    50px 55px 0 0 rgba(158, 158, 158, 1), 55px 55px 0 0 rgba(158, 158, 158, 1),
+    60px 55px 0 0 rgba(158, 158, 158, 1), 65px 55px 0 0 rgba(158, 158, 158, 1),
+    70px 55px 0 0 rgba(166, 166, 166, 1), 75px 55px 0 0 rgba(166, 166, 166, 1),
+    80px 55px 0 0 rgba(96, 125, 139, 1), 25px 60px 0 0 rgba(96, 125, 139, 1),
+    30px 60px 0 0 rgba(166, 166, 166, 1), 35px 60px 0 0 rgba(24, 31, 34, 1),
+    40px 60px 0 0 rgba(24, 31, 34, 1), 45px 60px 0 0 rgba(24, 31, 34, 1),
+    50px 60px 0 0 rgba(158, 158, 158, 1), 55px 60px 0 0 rgba(158, 158, 158, 1),
+    60px 60px 0 0 rgba(158, 158, 158, 1), 65px 60px 0 0 rgba(158, 158, 158, 1),
+    70px 60px 0 0 rgba(158, 158, 158, 1), 75px 60px 0 0 rgba(158, 158, 158, 1),
+    80px 60px 0 0 rgba(96, 125, 139, 1), 25px 65px 0 0 rgba(96, 125, 139, 1),
+    30px 65px 0 0 rgba(166, 166, 166, 1), 35px 65px 0 0 rgba(166, 166, 166, 1),
+    40px 65px 0 0 rgba(166, 166, 166, 1), 45px 65px 0 0 rgba(166, 166, 166, 1),
+    50px 65px 0 0 rgba(166, 166, 166, 1), 55px 65px 0 0 rgba(166, 166, 166, 1),
+    60px 65px 0 0 rgba(166, 166, 166, 1), 65px 65px 0 0 rgba(24, 31, 34, 1),
+    70px 65px 0 0 rgba(24, 31, 34, 1), 75px 65px 0 0 rgba(158, 158, 158, 1),
+    80px 65px 0 0 rgba(96, 125, 139, 1), 25px 70px 0 0 rgba(96, 125, 139, 1),
+    30px 70px 0 0 rgba(166, 166, 166, 1), 35px 70px 0 0 rgba(166, 166, 166, 1),
+    40px 70px 0 0 rgba(166, 166, 166, 1), 45px 70px 0 0 rgba(166, 166, 166, 1),
+    50px 70px 0 0 rgba(166, 166, 166, 1), 55px 70px 0 0 rgba(166, 166, 166, 1),
+    60px 70px 0 0 rgba(166, 166, 166, 1), 65px 70px 0 0 rgba(24, 31, 34, 1),
+    70px 70px 0 0 rgba(24, 31, 34, 1), 75px 70px 0 0 rgba(158, 158, 158, 1),
+    80px 70px 0 0 rgba(96, 125, 139, 1), 25px 75px 0 0 rgba(96, 125, 139, 1),
+    30px 75px 0 0 rgba(166, 166, 166, 1), 35px 75px 0 0 rgba(166, 166, 166, 1),
+    40px 75px 0 0 rgba(166, 166, 166, 1), 45px 75px 0 0 rgba(166, 166, 166, 1),
+    50px 75px 0 0 rgba(166, 166, 166, 1), 55px 75px 0 0 rgba(166, 166, 166, 1),
+    60px 75px 0 0 rgba(158, 158, 158, 1), 65px 75px 0 0 rgba(24, 31, 34, 1),
+    70px 75px 0 0 rgba(24, 31, 34, 1), 75px 75px 0 0 rgba(158, 158, 158, 1),
+    80px 75px 0 0 rgba(96, 125, 139, 1), 25px 80px 0 0 rgba(96, 125, 139, 1),
+    30px 80px 0 0 rgba(96, 125, 139, 1), 35px 80px 0 0 rgba(96, 125, 139, 1),
+    40px 80px 0 0 rgba(96, 125, 139, 1), 45px 80px 0 0 rgba(96, 125, 139, 1),
+    50px 80px 0 0 rgba(96, 125, 139, 1), 55px 80px 0 0 rgba(96, 125, 139, 1),
+    60px 80px 0 0 rgba(96, 125, 139, 1), 65px 80px 0 0 rgba(96, 125, 139, 1),
+    70px 80px 0 0 rgba(96, 125, 139, 1), 75px 80px 0 0 rgba(96, 125, 139, 1),
+    80px 80px 0 0 rgba(96, 125, 139, 1);
+  height: 5px;
+  width: 5px;
+}
+
+.farm_position-1 {
+  position: absolute;
+  left: 20px;
+  top: -10px;
+}
+
+.farm_position-2 {
+  position: absolute;
+  left: 20px;
+  top: 60px;
+}
+
+.farm_position-3 {
+  position: absolute;
+  left: 20px;
+  top: 130px;
+}
+
+.army_soldiers_enemy {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+/* .army-enemy {
+	position: absolute;
+	display: flex;
+	bottom: 500px;
+	left: 960px;
+	flex-direction: column;
+	border: 1px solid red;
+} */
+
+.money span {
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  color: gold;
+}
+
+.human1 {
+  /* 	transition: all 0.5s; */
+  position: absolute;
+  display: flex;
+  bottom: 300px;
+  left: 580px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 80px;
+  height: 125px;
+  transition: border 0.3s linear;
+}
+
+.human1:hover {
+  border: 1px solid blue;
+}
+
+.human2 {
+  /* 	transition: all 0.5s; */
+  position: absolute;
+  display: flex;
+  bottom: 100px;
+  left: 580px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid blue;
+  width: 80px;
+  height: 125px;
+}
+
+.human1_footman_ally0 {
+  margin-top: 25px;
+  height: 20px;
+  width: 20px;
+  /* 	  animation: footman_attack 1s infinite; */
+}
+
+.human1_footman_ally1 {
+  margin-top: 25px;
+  height: 20px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human1_footman_ally2 {
+  margin-top: 25px;
+  height: 20px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human1_footman_ally3 {
+  margin-top: 25px;
+  height: 20px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human1_footman_ally4 {
+  margin-top: 25px;
+  height: 20px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human1_footman_ally5 {
+  margin-top: 25px;
+  height: 20px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human1_footman_ally6 {
+  margin-top: 25px;
+  height: 20px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human1_footman_ally7 {
+  margin-top: 25px;
+  height: 15px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human2_footman_ally0 {
+  margin-top: 25px;
+  height: 20px;
+  width: 20px;
+  /* 	  animation: footman_attack 1s infinite; */
+}
+
+.human2_footman_ally1 {
+  margin-top: 25px;
+  height: 20px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human2_footman_ally2 {
+  margin-top: 25px;
+  height: 20px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human2_footman_ally3 {
+  margin-top: 25px;
+  height: 20px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human2_footman_ally4 {
+  margin-top: 25px;
+  height: 20px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human2_footman_ally5 {
+  margin-top: 25px;
+  height: 20px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human2_footman_ally6 {
+  margin-top: 25px;
+  height: 20px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human2_footman_ally7 {
+  margin-top: 25px;
+  height: 15px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.vampire1 {
+  position: absolute;
+  display: flex;
+  left: 1000px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid red;
+  bottom: 100px;
+  width: 35px;
+  height: 130px;
+  --child-margin-top: 30px;
+}
+
+.vampire2 {
+  position: absolute;
+  display: flex;
+  left: 1100px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid red;
+  bottom: 300px;
+  width: 35px;
+  height: 135px;
+  --child-margin-top: 30px;
+}
+
+.vampire3 {
+  position: absolute;
+  display: flex;
+  left: 800px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid red;
+  bottom: 300px;
+  width: 35px;
+  height: 135px;
+  --child-margin-top: 30px;
+}
+
+.vampire4 {
+  position: absolute;
+  display: flex;
+  left: 960px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid red;
+  bottom: 150px;
+  width: 35px;
+  height: 135px;
+  --child-margin-top: 30px;
+}
+
+.vampire1_thrall_enemy0,
+.vampire2_thrall_enemy0,
+.vampire3_thrall_enemy0,
+.vampire4_thrall_enemy0 {
+  /* position: absolute;
+right: 170px;
+top: -20px; */
+  margin-top: var(--child-margin-top);
+  margin-right: 40px;
+  animation: vampire1_thrall_move 1s infinite;
+}
+
+.vampire1_thrall_enemy1,
+.vampire2_thrall_enemy1,
+.vampire3_thrall_enemy1,
+.vampire4_thrall_enemy1 {
+  margin-top: var(--child-margin-top);
+  animation: vampire1_thrall_move 0.9s infinite;
+}
+
+.vampire1_thrall_enemy2,
+.vampire2_thrall_enemy2,
+.vampire3_thrall_enemy2,
+.vampire4_thrall_enemy2 {
+  margin-top: var(--child-margin-top);
+  animation: vampire1_thrall_move 1.1s infinite;
+}
+
+.vampire1_thrall_enemy3,
+.vampire2_thrall_enemy3,
+.vampire3_thrall_enemy3,
+.vampire4_thrall_enemy3 {
+  margin-top: var(--child-margin-top);
+  animation: vampire1_thrall_move 1s infinite;
+}
+
+.vampire1_thrall_enemy4,
+.vampire2_thrall_enemy4,
+.vampire3_thrall_enemy4,
+.vampire4_thrall_enemy4 {
+  margin-top: var(--child-margin-top);
+  animation: vampire1_thrall_move 0.9s infinite;
+}
+
+.vampire1_thrall_enemy5,
+.vampire2_thrall_enemy5,
+.vampire3_thrall_enemy5,
+.vampire4_thrall_enemy5 {
+  margin-top: var(--child-margin-top);
+  animation: vampire1_thrall_move 1.1s infinite;
+}
+
+.vampire1_thrall_enemy6,
+.vampire2_thrall_enemy6,
+.vampire3_thrall_enemy6,
+.vampire4_thrall_enemy6 {
+  margin-top: var(--child-margin-top);
+  animation: vampire1_thrall_move 1s infinite;
+}
+
+.vampire1_thrall_enemy7,
+.vampire2_thrall_enemy7,
+.vampire3_thrall_enemy7,
+.vampire4_thrall_enemy7 {
+  margin-top: var(--child-margin-top);
+  animation: vampire1_thrall_move 0.9s infinite;
+}
+
+.human3 {
+  /* 	transition: all 0.5s; */
+  position: absolute;
+  display: flex;
+  bottom: 300px;
+  left: 380px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid blue;
+  width: 80px;
+  height: 165px;
+  --child-margin-top: 40px;
+}
+
+.human3_knight_ally0 {
+  margin-top: var(--child-margin-top);
+  height: 20px;
+  width: 20px;
+  /* animation: knight_move  0.7s infinite; */
+}
+
+.human3_knight_ally1 {
+  margin-top: var(--child-margin-top);
+  margin-left: 20px;
+  height: 20px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human3_knight_ally2 {
+  margin-top: var(--child-margin-top);
+  height: 20px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human3_knight_ally3 {
+  margin-top: var(--child-margin-top);
+  height: 20px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human3_knight_ally4 {
+  margin-top: var(--child-margin-top);
+  height: 20px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human3_knight_ally5 {
+  margin-top: var(--child-margin-top);
+  height: 20px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human3_knight_ally6 {
+  margin-top: var(--child-margin-top);
+  height: 20px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}
+
+.human3_knight_ally7 {
+  margin-top: var(--child-margin-top);
+  height: 15px;
+  width: 20px;
+  /*    animation: x 1s infinite; */
+}

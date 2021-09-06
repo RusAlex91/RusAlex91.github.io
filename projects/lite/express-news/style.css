@@ -1,0 +1,202 @@
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+        .news-wrapper {
+            max-width: 375px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: lightgray;
+        }
+        
+        header {
+            height: 54px;
+            background-color: rgba(167, 167, 167, 0.5);
+            display: flex;
+            align-items: top;
+            padding-left: 10px;
+            justify-content: center;
+        }
+        
+        header h1 {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+        
+        #search-bar {
+            z-index: -1;
+            position: absolute;
+        }
+        
+        .search-wrapper {
+            position: relative;
+            width: 375px;
+        }
+        
+        #search-bar input {
+            width: 375px;
+            height: 35px;
+            background-color: lightgray;
+            color: black;
+        }
+        
+        #search-bar input:focus {
+            outline: none;
+        }
+        
+        #search-bar button {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 5px;
+            right: 50px;
+            background-color: lightgray;
+            background-image: url(arrow.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            border: none;
+            cursor: pointer;
+        }
+        
+        #category {}
+        
+        .nav-bar {
+            background-color: rgb(116, 113, 109);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 49px;
+            width: 375px;
+        }
+        
+        .nav-bar a {
+            text-decoration: none;
+            color: white;
+            width: 125px;
+            height: 49px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-transform: uppercase;
+            padding-top: 5px;
+            border-bottom: 5px solid transparent;
+            font-size: 13px;
+        }
+        
+        .nav-bar a:hover {
+            border-bottom: 5px solid white;
+        }
+        
+        .nav-bar a.selected {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(79, 79, 79, 0.45) 100%), rgba(79, 79, 79, 0.4);
+            backdrop-filter: blur(100px);
+            border-bottom: 2px solid white;
+        }
+        
+        .article-news {
+            position: relative;
+            width: 375px;
+            height: 120px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+        
+        .article-news-inner-wrapper {
+            padding: 25px;
+            position: relative;
+        }
+        
+        .article-news-title {
+            height: 60px;
+            width: 317px;
+            font-size: 14px;
+            overflow: hidden;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+        }
+        
+        .article-news-category {
+            font-size: 12px;
+            clip-path: polygon(0 0, 100% 0, 84% 100%, 0 100%);
+            background-color: rgba(90, 200, 250, 0.8);
+            width: 80px;
+            height: 18px;
+            color: white;
+            padding-left: 7px;
+        }
+        
+        .article-news-time {
+            font-size: 12px;
+            opacity: 0.8;
+            color: white;
+        }
+        
+        .article-news-inner-wrapper .wrapper {
+            margin-top: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .article-news-inner-wrapper a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        .articles-wrapper {
+            background-color: gray;
+            transition: all 0.2s;
+        }
+        
+        .story1 {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url("http://img1.joyreactor.cc/pics/post/%D0%9A%D0%B0%D0%BB%D1%8F%D0%BA%D0%B8-%D0%9C%D0%B0%D0%BB%D1%8F%D0%BA%D0%B8-%D1%84%D1%8D%D0%BD%D0%B4%D0%BE%D0%BC%D1%8B-kaijune-kaijune-2021-6720217.png");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .article-news-img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 375px;
+            height: 142px;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+        
+        .blurred {
+            animation: loader 1.5s infinite;
+            animation-direction: alternate;
+        }
+        
+        @keyframes loader {
+            from {
+                background-color: gray;
+            }
+            to {
+                background-color: lightgray;
+            }
+        }
+        
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+        }
+        
+        .sticky+.articles-wrapper {
+            /* padding-top: 32px;
+            transition: all 0.1s; */
+        }
+        
+        .hidden-search {
+            opacity: 0;
+            transition: opacity 0.1s linear;
+        }
+        
+        .hidden-search:hover {
+            opacity: 1;
+        }

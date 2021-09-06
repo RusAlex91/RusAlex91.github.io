@@ -1,0 +1,657 @@
+/*Туман*/
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
+@import url("css/fog.css");
+@import url("css/TV Inventory.css");
+@import url("css/TV Main.css");
+@import url("css/TV Text.css");
+@import url("css/TV button.css");
+@import url("css/before was word.css");
+@import url("css/loading.css");
+@import url("css/typewriter anim.css");
+@import url("css/handwriting.css");
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pangolin&display=swap');
+/* Технический чердак: ресет баттон, шрифты */
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "DwarvenAxe BB W00 Regular";
+  src: url("fonts/11b9313c156261bdee0bc8b745b34450.eot");
+  /* IE9*/
+  src: url("fonts/11b9313c156261bdee0bc8b745b34450.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("fonts/11b9313c156261bdee0bc8b745b34450.woff2") format("woff2"),
+    /* chrome、firefox */
+    url("fonts/11b9313c156261bdee0bc8b745b34450.woff") format("woff"),
+    /* chrome、firefox */
+    url("fonts/11b9313c156261bdee0bc8b745b34450.ttf") format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("fonts/11b9313c156261bdee0bc8b745b34450.svg#DwarvenAxe BB W00 Regular") format("svg");
+  /* iOS 4.1- */
+}
+
+@font-face {
+  font-family: 'Peanuts Rus by me';
+  src: url('fonts/PeanutsRusbyme-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'comic sans MS';
+  src: url('fonts/comic sans.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'a_Stamper';
+  src: url('fonts/A_Stamper.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Courier New';
+  src: url('fonts/courier.ttf') format('truetype');
+}
+
+body {
+  transition: all 1s;
+  opacity: 1;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  visibility: hidden;
+}
+
+.opacity-zero {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.opacity-full {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+/* Небеса*/
+.heaven-text {
+  margin-top: 22%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "comic sans MS";
+  font-style: normal;
+  font-weight: normal;
+  color: gold;
+  font-size: 6rem;
+  text-shadow: black 0 0 2px;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.heaven-text:hover {
+  text-shadow: darkred 0 0 6px;
+}
+
+.heaven-text-hint {
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "comic sans MS";
+  font-style: normal;
+  font-weight: normal;
+  color: gold;
+  font-size: 2rem;
+  text-shadow: black 0 0 2px;
+  transition: all 1s;
+}
+
+/* Управление потоком теликов */
+.monitors {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  /* flex-wrap: wrap; */
+}
+
+/* Главный экран с вводом имени */
+html {
+  font-size: 62.5%;
+}
+
+.titleScreen {
+  background-color: black;
+  position: relative;
+  height: 70rem;
+  width: 60.2rem;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+}
+
+.bg-text-stage {
+  width: inherit;
+  transform: scale(1);
+  transition: all 3s;
+}
+
+.bg-text-stage-zoom {
+  position: absolute;
+  width: inherit;
+  transition: all 3s;
+  transform: scale(3.5);
+  right: 0px;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+
+.zoom-stage-1 {
+  position: absolute;
+  transform: scale(3.5);
+  top: 0px;
+  left: 700px;
+  transition: all 3s;
+}
+
+.zoom-stage-2 {
+  position: absolute;
+  transform: scale(6.5);
+  top: -222px;
+  left: 1500px;
+  transition: all 3s;
+}
+
+.zoom-stage-3 {
+  position: absolute;
+  transform: scale(8.5);
+  top: -280px;
+  left: 2100px;
+  transition: all 3s;
+}
+
+.text-phase-bg-zoom-resize {
+  padding-bottom: 34rem !important;
+}
+
+.text-phase-bg-zoom-revert {
+  padding-bottom: 70rem !important;
+}
+
+.text-phase-bg-opacity-shade {}
+
+.position-wrapper-phase-1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.position-wrapper-phase-2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 1px;
+  right: 50px;
+  background-image: url("../img/old-paper.png");
+}
+
+.next-monologe {
+  outline: none;
+  position: absolute;
+  top: 500px;
+  left: 400px;
+  width: 30px;
+  height: 30px;
+  border-style: solid;
+  border-width: 15px 0 15px 26.6px;
+  border-color: transparent transparent transparent #cccccc;
+  opacity: 0.5;
+  line-height: 0px;
+  _border-color: #000000 #000000 #000000 #cccccc;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  transition: 0.5s;
+  margin: 15px;
+}
+
+
+.next-monologe:hover {
+  opacity: 1;
+  left: 406px;
+  transition: 0.5s;
+}
+
+.narratorSpeach {
+  font-family: "A_Stamper";
+  transition: all 1s;
+  margin-bottom: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3.5rem;
+}
+
+.name {
+  outline: none;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  font-size: 6rem;
+  height: 14rem;
+  width: 35rem;
+  margin-bottom: 6rem;
+  background-image: url("../img/bark_balloon_heroic.png");
+  background-repeat: no-repeat;
+  background-position: bottom -40px right -5px;
+  color: darkred;
+  font-family: "DwarvenAxe BB W00 Regular";
+  text-align: center;
+  text-shadow: 8px 2px 5px rgba(0, 0, 0, 0.52);
+}
+
+.nameInputButton {
+  position: absolute;
+  top: 40rem;
+  left: 28rem;
+  height: 3rem;
+  width: 6rem;
+  background: url("../img/heirloom_exchange.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: none;
+  transition: opacity 0.2s;
+  opacity: 1;
+}
+
+.nameInputButton:hover {
+  border: goldenrod 1px solid;
+}
+
+.titleDecor {
+  position: absolute;
+  top: 14.5rem;
+  left: 8rem;
+  opacity: 1;
+}
+
+.titleDecor-fix {
+  position: absolute;
+  top: 14.5rem;
+  left: 8.5rem;
+}
+
+.pushedInputButton {
+  position: absolute;
+  top: 33rem;
+  left: 40rem;
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+
+/* Отрисовка квестового окна, диалогововых выборов и ячеек предметов */
+.quest-text {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-text {
+  height: 12rem;
+  width: 50rem;
+  /* border: 2px solid white; */
+  font-size: 3rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  color: white;
+  opacity: 0;
+  transition: all 1s;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.wrapper-choices {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  height: 13.4rem;
+  /* border: 2px solid blue; */
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  line-height: 30px;
+  opacity: 0;
+  transition: all 1s
+
+}
+
+#choice1 {
+  margin-top: 0.2rem;
+  margin-bottom: 1.5rem;
+  color: lightgray;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+#choice2 {
+  margin-bottom: 1.5rem;
+  color: lightgray;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+#choice3 {
+  margin-bottom: 0.2rem;
+  color: lightgray;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+#choice1:hover {
+  color: brown;
+  cursor: pointer;
+}
+
+#choice2:hover {
+  color: brown;
+  cursor: pointer;
+}
+
+#choice3:hover {
+  color: brown;
+  cursor: pointer;
+}
+
+.interaction-info-wrapper {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.droping {
+  position: relative;
+  height: 15rem;
+  width: 15rem;
+
+  margin-left: 2.7rem;
+  bottom: 1.2rem;
+}
+
+.droping-wrapper {
+  position: relative;
+  opacity: 0;
+  transition: all 1s;
+  right: 2rem;
+  top: 1rem;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+/*Инвентарь*/
+.box {
+  width: 150px;
+  height: 150px;
+  float: left;
+  /* border: 1px solid gray; */
+}
+
+.box:nth-child(3) {
+  clear: both;
+}
+
+.vial_of_tears {
+  background-image: url("../img/inv_trinket+vial_of_tears.png");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center;
+}
+
+.philosophers_wisdom {
+  background-image: url("../img/inv_trinket+philosophers_wisdom.png");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center;
+}
+
+.letter {
+  background-image: url("../img/inv_trinket+bloodstained_bounty_list.png");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center;
+}
+
+
+
+.profane_scroll {
+  background-image: url("../img/inv_trinket+profane_scroll.png");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center;
+}
+
+.rayners_seal {
+  background-image: url("../img/inv_trinket+rayners_seal.png");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center;
+}
+
+.wine {
+  background-image: url("../img/inv_trinket+cc_crimson_tincture.png");
+  background-repeat:no-repeat;
+  background-color: black;
+  background-position: center;
+}
+
+.startText {
+  margin-top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "PeanutsRusbyme-Regular";
+  color: darkgray;
+  font-size: 6rem;
+  opacity: 0.3;
+}
+
+.heroSpeach {
+  margin-top: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 6rem;
+  font-family: "Peanuts Rus by me";
+}
+
+/* Медиа выражения */
+@media (max-width: 1280px) {
+  .monitors {
+    display: grid;
+  }
+
+  #container-text {
+    grid-area: 1 / 1 / 4 / 5;
+    margin-right: 11%;
+  }
+
+  #container {
+    grid-area: 1 / 9 / 4 / 5;
+    margin-left: 14%;
+  }
+
+  #container-inventory {
+    grid-area: 2 / 1 / 3 / 4;
+  }
+
+  #monitor-inventory {
+    margin-left: 12%;
+    margin-right: 0%;
+  }
+}
+
+.dropInv {
+  height: 300px;
+  width: 310px;
+}
+
+/* svg styles */
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px !important;
+  height: 100px;
+  padding: 1em;
+  margin: 0 auto 1em;
+  vertical-align: top;
+}
+
+/*
+  Set the color of the icon
+*/
+svg path,
+svg rect {
+  fill: #ff0000;
+}
+
+@media (min-width: 1543px) {}
+
+@media (min-width: 1920px) {
+  .monitors {
+    display: flex;
+    justify-content: center;
+  }
+
+  #container-inventory {
+    width: 405px;
+  }
+
+  #container {
+    min-width: 700px;
+  }
+
+  #container-text {}
+}
+
+/* START TOOLTIP STYLES */
+[tooltip] {
+  position: relative;
+  /* opinion 1 */
+}
+
+/* Applies to all tooltips */
+[tooltip]::before,
+[tooltip]::after {
+  text-transform: none;
+  /* opinion 2 */
+  font-size: 1.6rem;
+  /* opinion 3 */
+  font-weight: 500;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+
+[tooltip]::before {
+  content: '';
+  border: 5px solid transparent;
+  /* opinion 4 */
+  z-index: 1001;
+  /* absurdity 1 */
+}
+
+[tooltip]::after {
+  content: attr(tooltip);
+  /* magic! */
+  /* most of the rest of this is opinion */
+  font-family: "Arial";
+  text-align: center;
+  /*
+    Let the content set the size of the tooltips
+    but this will also keep them from being obnoxious
+    */
+  min-width: 3rem;
+  max-width: 21rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1ch 1.5ch;
+  border-radius: .3ch;
+  box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+  background: #fff;
+  color: black;
+  z-index: 1000;
+  /* absurdity 2 */
+}
+
+/* Make the tooltips respond to hover */
+[tooltip]:hover::before,
+[tooltip]:hover::after {
+  display: block;
+}
+
+/* don't show empty tooltips */
+[tooltip='']::before,
+[tooltip='']::after {
+  display: none !important;
+}
+
+/* FLOW: DOWN */
+[tooltip][flow^="down"]::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: #333;
+}
+
+[tooltip][flow^="down"]::after {
+  top: calc(100% + 10px);
+}
+
+[tooltip][flow^="down"]::before,
+[tooltip][flow^="down"]::after {
+  left: 50%;
+  transform: translate(-50%, .5em);
+}
+
+/* KEYFRAMES */
+@keyframes tooltips-vert {
+  to {
+    opacity: .9;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes tooltips-horz {
+  to {
+    opacity: .9;
+    transform: translate(0, -50%);
+  }
+}
+
+/* FX All The Things */
+[tooltip]:not([flow]):hover::before,
+[tooltip]:not([flow]):hover::after,
+[tooltip][flow^="down"]:hover::before,
+[tooltip][flow^="down"]:hover::after {
+  animation: tooltips-vert 300ms ease-out forwards;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!--
+Добавить небольшую кнопку ABOUT (емейл куда писать и вк куда обращаться) и правообладателям (все то, что ниже).
+Роман добрый вечер. Размещение музыки на сайте без резрешения правообладателя, даже при условии, что вы не будете получать материальную выгоду это палка о двух конца.
+С одной стороны диспозиция ст. 146 предусматривает наказание только в случае причинения имущественного вреда правообладателю и/или обогащение разместившему.
+В случае если вы предусмотрите следующую информацию, то думаю всех проблем можно будет избежать
+1-е запрет на скачивание
+2-е информация о правообладателе
+3-е информация для правообладателя о том, что в случае если он/она считает, что размещение композиции нарушает его права, то достаточно отписаться вам и композиция будет убрана.
+4-е информация о том, что все композиции размещены исключительно для ознакомления.
+
+Вывести предупреждения на главную, о том, что используется музыка и звуки.
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="clear-mainstyles.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="normalize.css" media="screen" />
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <link href="cssanimation/cssanimation.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+  <title>Document</title>
+
+</head>
+
+<body class="heaven">
+
+  <span class="heaven-text cssanimation hu__hu__">Вы готовы?</span>
+  <span class="heaven-text-hint cssanimation hu__hu__ hidden">(просто кликните на текст)</span>
+  <img class="fog fog1 hidden" data-src-1="../img/cloud_fog_by_moonglowlilly-d5tk3l7.png">
+  <img class="fog fog2 hidden" data-src-1="../img/cloud_fog_by_moonglowlilly-d5tk3l7.png">
+  <img class="fog fog3 hidden" data-src-1="../img/cloud_fog_by_moonglowlilly-d5tk3l7.png">
+  <div class="monitors hidden">
+    <div id="container-inventory">
+      <div id="monitor-inventory">
+        <div id="monitorscreen-inventory">
+          <div class="loader loader--style1 hidden" title="0">
+            <svg version="1.1" id="loader-1" class="ldr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40"
+              xml:space="preserve">
+              <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+    s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+    c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z" />
+              <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+    C22.32,8.481,24.301,9.057,26.013,10.047z">
+                <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.5s" repeatCount="indefinite" />
+              </path>
+            </svg>
+          </div>
+          <div class="container-invenotory hidden">
+            <div data-drop-target="true" class="dropInv">
+              <!-- <div id="box1" draggable="true" class="box vial_of_tears"></div>
+              <div id="box2" draggable="true" class="box philosophers_wisdom"></div>
+              <div id="box3" draggable="true" class="box profane_scroll"></div> -->
+              <div id="box4" draggable="true" class="box rayners_seal" tooltip="...с ответами!" flow="up"></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="monitor">
+        <div class="tv-control">
+          <div class="tv-button" onclick="controls.toggleButtonTV()">
+          </div>
+          <span class="tvHint"></span>
+          <i class="arrow-hint arrow down"></i>
+          <i class="arrow-hint arrow down2"></i>
+          <i class="arrow-hint arrow down3"></i>
+        </div>
+        <div id="monitorscreen" class="monitorscreen">
+          <span class="startText">OFF</span>
+          <div class="wrapper-loader hidden">
+            <div class="loader-outer">
+              <div class="loader-inner">
+                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+              </div>
+            </div>
+            <h1><span>LOADING</span></h1>
+          </div>
+          <div class="titleScreen hidden">
+
+            <img data-src-1="../img/michele-botticelli-arkham-night-med.jpg" alt="" class="bg-town">
+            <div class="position-wrapper-phase-1">
+              <!-- <div class="position-wrapper-phase-2 hidden"></div> -->
+              <div class="Twrapper">
+                <p class="typewriting hidden"></p>
+                <p class="heroSpeach cssanimation hidden"></p>
+                <div id="handwriting" class="fancy_title hidden">
+                  <canvas class="canvas" id="canvas1" width=600 height=100></canvas>
+                  <canvas class="canvas" id="canvas2" width=600 height=100></canvas>
+                  <canvas class="canvas" id="canvas3" width=600 height=100></canvas>
+                  <canvas class="canvas" id="canvas4" width=600 height=100></canvas>
+                  <canvas class="canvas" id="canvas5" width=600 height=100></canvas>
+                  <canvas class="canvas" id="canvas6" width=600 height=100></canvas>
+                  <canvas class="canvas" id="canvas7" width=600 height=100></canvas>
+                  <button class="next-monologe hidden">
+                    <div class="expandClickArea"></div>
+                  </button>
+
+                  <!--
+        <canvas class="canvas" id="canvas6" width=600 height=100></canvas>
+        <canvas class="canvas" id="canvas7" width=600 height=100></canvas>
+        <canvas class="canvas" id="canvas8" width=600 height=100></canvas> -->
+                </div>
+                <audio id="audio-typing" src="sound/typing.mp3" autoplay="false"></audio>
+              </div>
+
+            </div>
+
+
+            <audio id="audio" src="../sound/cigarette.mp3" autoplay="false"></audio>
+            <audio id="audio-heaven" src="../sound/heaven.mp3?76876343087987" autoplay="false"></audio>
+            <audio id="audio-snap" src="../sound/thanos_snap_sound.mp3" autoplay="false"></audio>
+            <audio id="audio-text-phase" src="../sound/text-phase.mp3" autoplay="false"></audio>
+            <audio id="audio-male-gasp" src="sound/male-gasp.ogg" autoplay="false"></audio>
+            <audio id="audio-coughing" src="sound/coughing.wav" autoplay="false"></audio>
+            <audio id="audio-spitting" src="sound/spitting.wav" autoplay="false"></audio>
+            <div class="nameEnterForm">
+              <img data-src-1="../img/titleCandles.png" alt="" class="titleDecor">
+              <input id="inp" type="text" class="name" placeholder="Your name">
+              <button id="inputButton" class="nameInputButton clear"></button>
+              <img data-src-1="../img/quest_log.png" alt="" class="pushedInputButton hidden">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container-text">
+      <div id="monitor-text">
+        <div id="monitorscreen-text">
+          <div class="loader loader--style1 hidden" title="0">
+            <svg version="1.1" id="loader-1" class="ldr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40"
+              xml:space="preserve">
+              <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+    s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+    c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z" />
+              <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+    C22.32,8.481,24.301,9.057,26.013,10.047z">
+                <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.5s" repeatCount="indefinite" />
+              </path>
+            </svg>
+          </div>
+          <div class="quest-text hidden">
+            <span id="myTypingText" class="main-text noselect"></span>
+            <!-- info-choice-wrapper -->
+            <div class="interaction-info-wrapper">
+              <div class="wrapper-choices">
+                <span choiceData="Wine1" onclick="selectChoice(0);choiceHandlers.wine()" id="choice1" class="choices noselect cssanimation">выбор 1</span>
+                <span choiceData="Wine2" onclick="selectChoice(1);choiceHandlers.wine()" id="choice2" class="choices noselect cssanimation">выбор 2</span>
+                <span choiceData="Wine3" onclick="selectChoice(2);choiceHandlers.wine()" id="choice3" class="choices noselect cssanimation">выбор 3</span>
+              </div>
+              <div class="droping-wrapper">
+                <div data-drop-target="true" id="drop1" class="droping"></div>
+                <div data-drop-target="true" id="drop2" class="droping hidden"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<script type="text/javascript" src="cssanimation/letteranimation.min.js"></script>
+
+
+
+</body>
+<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+<script type="text/javascript" src="main-clear.js"></script>
+
+</html>

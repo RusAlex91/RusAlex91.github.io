@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #53585c;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+#title {
+  display: block;
+  margin-top: 20px;
+  color: white;
+  position: absolute;
+  width: 98vw;
+  height: 50px;
+  font-size: 26px;
+  text-align: center;
+}
+
+.winner-title {
+  display: none;
+  margin-top: 20px;
+  color: white;
+  position: absolute;
+  width: 98vw;
+  height: 50px;
+  font-size: 26px;
+  text-align: center;
+}
+
+section {
+  margin-top: 30px;
+}
+
+.video {
+  width: 49vw;
+  height: 60vh;
+  border: 1px solid tomato;
+}
+
+#player {
+  margin-top: 50px;
+  width: 45vw;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+#player2 {
+  margin-top: 50px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  width: 45vw;
+}
+
+button {
+  width: 45vw;
+  border: 1px solid brown;
+  height: 50px;
+  background: brown;
+  background-position: center;
+  background-size: 45px;
+  background-repeat: no-repeat;
+}
+
+button {
+  box-shadow: 0px 0px 0px transparent;
+  text-shadow: 0px 0px 0px transparent;
+}
+
+button:hover {
+  border: 1px solid transparent;
+  background-position: center;
+  background-size: 50px;
+  background-repeat: no-repeat;
+}
+
+button:active {
+  outline: none;
+  border: 2px solid #384b74;
+}
+
+button:focus {
+  outline: 0;
+}
+
+#start {
+  background-image: url("../src/img/play-button-arrow.png");
+  background-position: center;
+  background-size: 45px;
+  background-repeat: no-repeat;
+}
+
+#start:hover {
+  background-image: url("../src/img/play-button-arrow.png");
+  background: #5aba62;
+  background-position: center;
+  background-size: 45px;
+  background-repeat: no-repeat;
+}
+
+#vote-left,
+#vote-right {
+  background-image: url("../src/img/check-mark-black-outline.png");
+}
+
+#vote-left:hover,
+#vote-right:hover {
+  background: #5a79ba;
+  background-image: url("../src/img/check-mark-black-outline.png");
+}
+
+.modal {
+  text-align: center;
+  display: block;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: black;
+  /* Black w/ opacity */
+}
+
+.wrapper-modal {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=styles.css.map */

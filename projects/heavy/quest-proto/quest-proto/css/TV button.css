@@ -1,0 +1,51 @@
+.tv-button {
+  position: absolute;
+  top:723px;
+  left: 420px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  box-shadow: 0 0 20px 3px #ff0000;
+  z-index: 2;
+  cursor: pointer;
+}
+.tv-button-off {
+  box-shadow: none;
+background-color: #2f2f2f;
+}
+
+.arrow-hint {
+  position: absolute;
+  border: solid darkred;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+  z-index: 2;
+  top: 680px;
+  left: 422px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transition: all 0.4s;
+}
+
+.down2 {
+  z-index: 2;
+  top: 690px;
+  left: 422px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transition: all 0.6s;
+}
+
+.down3 {
+  z-index: 2;
+  top: 700px;
+  left: 422px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transition: all 0.8s;
+}

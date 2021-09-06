@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="/favicon.ico">
+    <title>cyber_honey</title>
+    <link href="./css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="background2"></div>
+        <div class="background"></div>
+
+        <div class="lights-box">
+            <div class="logo-light"></div>
+            <div id="promo-action-light"></div>
+            <div id="promo-static-light"></div>
+            <div id="promo-static-light-2"></div>
+            <div id="catalogue-static-light"></div>
+            <div id="catalogue-action-light"></div>
+            <div id="why-static-light"></div>
+            <div id="why-action-light"></div>
+            <div id="where-action-light"></div>
+            <div id="contact-action-light"></div>
+        </div>
+        <div class="order-light"></div>
+        <!-- <img class="background__lights" src="./assets/lights.png" /> -->
+        <main>
+            <header class="header-wrapper">
+                <div class="logo">
+                    <div class="company-name">
+                        <div class="company-name-text-wrapper">
+                            <span class="company-name-right__text">[Cyber</span>
+                            <img class="company-name__logo" src="img/cyber-bee.png" alt="" />
+                            <span class="company-name-left__text">Hive]</span>
+                        </div>
+                        <h1 class="company-name__special-text special-title-text ">Honey</h1>
+                        <p class="company-name__adv-text">We deliver the finest honey throughout the galaxy!</p>
+                    </div>
+                    <span class="logo__text"></span>
+                </div>
+                <nav class="navigation">
+
+                    <a class="navigation__promo"><span onclick="navigation.promo()"
+                            class="navigation__promo-text">_Promo</span></span><span class="nav-promo-light"></span></a>
+                    <a class="navigation__catalogue"><span onclick="navigation.catalogue()"
+                            class="navigation__promo-text">Catalogue</span><span class="nav-catalogue-light"></span></a>
+                    <a class="navigation__where"><span onclick="navigation.where()"
+                            class="navigation__promo-text">Where</span><span class="nav-where-light"></span></a>
+                    <a class="navigation__why"><span onclick="navigation.why()" class="navigation__promo-text">Why
+                            we</span><span class="nav-why-light"></span></a>
+                    <a class="navigation__contact"><span onclick="navigation.contact()"
+                            class="navigation__promo-text">Contact</span><span class="nav-contact-light"></span></a>
+                </nav>
+            </header>
+
+
+            <div class="news">
+                <h2 class="special-title-text">News</h2>
+                <div class="news__articles">
+                    <article class="article">
+                        <p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia
+                        </p>
+                        <figure class="article__figure">
+                            <img src="./img/news/alien-icon.png" alt="Trulli">
+                            <figcaption>
+                                Cyber Bee Galaxy News
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="article">
+                        <a class="article__link" href="http://google.com">
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                                mollitia
+                            </span>
+                        </a>
+                        <figure class="article__figure">
+                            <img src="./img/news/alien-2-icon.png" alt="Trulli">
+                            <figcaption>
+                                Cyber Bee Galaxy News
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="article">
+                        <p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia
+                        </p>
+                        <figure class="article__figure">
+                            <img src="./img/news/bee-icon.png" alt="Trulli">
+                            <figcaption>
+                                Cyber Bee Galaxy News
+                            </figcaption>
+                        </figure>
+                    </article>
+                </div>
+            </div>
+
+            <div class="promo-wrapper" id="promo">
+                <h2 class="special-title-text">Promo</h2>
+            </div>
+            <div class="promo">
+                <div class="promo-item">
+                    <div class="promo-item__logo-wrapper">
+                        <img src="img/promo/Jar.png" alt="HoneyJar" class="promo-item__logo" />
+                        <span class="promo-item__price">2 euro</span>
+                    </div>
+                    <p class="promo-item__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    </p>
+                </div>
+                <div class="promo-item">
+                    <div class="promo-item__logo-wrapper">
+                        <img src="img/promo/Jar-2.png" alt="HoneyJar" class="promo-item__logo" />
+                        <span class="promo-item__price">2 euro</span>
+                    </div>
+                    <p class="promo-item__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    </p>
+                </div>
+                <div class="promo-item">
+                    <div class="promo-item__logo-wrapper">
+                        <img src="img/promo/Jar-3.png" alt="HoneyJar" class="promo-item__logo" />
+                        <span class="promo-item__price">2 euro</span>
+                    </div>
+                    <p class="promo-item__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    </p>
+                </div>
+            </div>
+            <div class="catalog" id="catalogue">
+                <h2 class="special-title-text">Catalogue</h2>
+                <div class="pads-wrapper">
+                    <div class="catalog__pad-1">
+                        <img src="img/catalog/cyber-pad.png" alt="" class="" />
+                        <span class="corousel__item-number">Item №1</span>
+                        <span class="corousel__title">Sweet Honey</span>
+                        <div class="carousel-container">
+                            <div class="carousel-slide">
+                                <img src="img/catalog/Honey-6.png" alt="" id="lastClone" />
+                                <img src="img/catalog/Honey-1.png" alt="" />
+                                <img src="img/catalog/Honey-2.png" alt="" />
+                                <img src="img/catalog/Honey-3.png" alt="" />
+                                <img src="img/catalog/Honey-4.png" alt="" />
+                                <img src="img/catalog/Honey-5.png" alt="" />
+                                <img src="img/catalog/Honey-6.png" alt="" />
+                                <img src="img/catalog/Honey-1.png" alt="" id="firstClone" />
+                            </div>
+
+                            <div class="carousel-controls">
+                                <button id="prevBtn">&lt;</button>
+                                <button id="nextBtn">&gt;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__pad-2">
+                        <img src="img/catalog/cyber-pad.png" alt="" />
+                        <span class="catalog-pad-2__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            (moving) et dolore magna aliqua. Quis ipsum suspendisse
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div id="where" class="location">
+                <h2 class="location__title special-title-text">Where we located?</h2>
+                <div class="location__map">
+                    <!-- Заглушка для GoogleMaps Api  -->
+                    <img src="./img/map-dummy.png" alt="">
+
+                </div>
+            </div>
+            <section class="advantages" id="advantages">
+                <h2 class="special-title-text">Why we?</h2>
+                <div class="advantage-wrapper">
+                    <div class="advantage">
+                        <img src="../img/adv/shop.png" alt="" class="advantage__img" width="123px" height="125px">
+                        <span class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do</span>
+                    </div>
+                    <div class="advantage">
+                        <img src="../img/adv/credit-card.png" alt="" class="advantage__img" width="125px" height="83px">
+                        <span class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                        </span>
+                    </div>
+                    <div class="advantage">
+                        <img src="../img/adv/touch.png" alt="" class="advantage__img" width="91px" height="125px">
+                        <span class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do</span>
+                    </div>
+                    <div class="advantage">
+                        <img src="../img/adv/shopping-cart.png" alt="" class="advantage__img" width="125px" height="122px">
+                        <span class="advantage__text">Lorem ipsum dolor sit amet, consectetur </span>
+                    </div>
+                    <div class="advantage">
+                        <img src="../img/adv/tag.png" alt="" class="advantage__img" width="123px" height="124px">
+                        <span class="advantage__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do</span>
+                    </div>
+                    <div class="advantage">
+                        <img src="../img/adv/discount.png" alt="" class="advantage__img" width="120px" height="125px">
+                        <span class="advantage__text">Lorem ipsum dolor sit amet, consectetur </span>
+                    </div>
+                </div>
+            </section>
+            <div id="contact" class="contact-form">
+                <h3 class="contact-form__title">Have a question? <br> Contact us</h3>
+                <form action="" class="contact-form__form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone">
+                    <small>Format: XXX-XXX-XXXX</small>
+                    <label for="textarea">Text:</label>
+                    <textarea id="textarea" name="message" rows="10" cols="30" required></textarea>
+                    <button>Send</button>
+                </form>
+            </div>
+
+
+        </main>
+        <script src="./js/main.js"></script>
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAP-Xc8OC4aCdT3YJXiE4VfTUnV4JJAMzI&callback=initMap&libraries=&v=weekly" async></script> -->
+
+
+</body>
+
+</html>

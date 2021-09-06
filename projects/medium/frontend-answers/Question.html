@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="CSS/Main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <main>
+    <header class="main">
+      <span class="logo"><a href="index.html" class="logo-link">Frontend-Answers.ru</a></span>
+
+    </header>
+    <div class="line upper-line"></div>
+    <h2 class="themes">Общие</h2>
+    <div class="" id="wrapper-comments">
+      <div id="hdcomments">
+        <h3>leave a replay</h3>
+        <div id="hdc_create_comment">
+          <!-- comment form -->
+          <label for="hdc_comment_input" class="hdc_label">Leve a Comment</label>
+          <textarea id="hdc_comment_input" rows="6" class="hdc_input"></textarea>
+          <div id="hd_comment_contact">
+            <div>
+              <label for="hdc_email_input" class="hdc_label">Your Email</label>
+              <input type="email" name="" id="hdc_email_input" class="hdc_input">
+            </div>
+            <div>
+              <label for="hdc_name_input" class="hdc_label">Your Name</label>
+              <input type="text" name="" id="hdc_name_input" class="hdc_input">
+            </div>
+          </div>
+
+
+          <div id="hdc_comment_footer">
+            <div id="hdc_comment_reactions">
+              <h4 class="hdc_reaction_title">Reactions</h4>
+              <span class="hdc_reaction" data-reaction="like">👍</span>
+              <span class="hdc_reaction" data-reaction="good">🙂</span>
+              <span class="hdc_reaction" data-reaction="ok">😐</span>
+              <span class="hdc_reaction" data-reaction="meh">😕</span>
+              <span class="hdc_reaction" data-reaction="dislike">👎</span>
+            </div>
+            <button id="hdc_submit" class='hdc_submit' disabled="true">Submit</button>
+          </div>
+        </div>
+        <div id="hdc_comments">
+          <!-- show existing comments -->
+          <hd3>Comments</hd3>
+
+          <div class="hdcomment hdc_lvl0" id="hdcomment_1">
+            <div class="hdc_comment">
+              <p>comment!</p>
+            </div>
+            <div class="hdc_meta">
+              <div class="hdc_meta_date_autor">
+                may 11m 2009
+                <span class="hdc_meta_autor">Dylan</span>
+              </div>
+              <div class="hdc_vote">
+                <span class="hdc_vote_1">+3</span>
+                <div class="hdc_vote_options">
+                  <span class="hdc_upvote" data-id="1">&#9650;</span>
+                  <span class="hdc_downvote" data-id="1">&#9660;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="line footer-line"></div>
+        <p class="slogan">This is my foot. There are many like it, but this one is mine.</p>
+
+      </footer>
+  </main>
+</body>
+<script src="JS/main.js" charset="utf-8"></script>
+<script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
+
+</html>

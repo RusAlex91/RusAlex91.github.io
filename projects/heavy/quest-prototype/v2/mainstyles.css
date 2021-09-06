@@ -1,0 +1,802 @@
+/* В начале - текстовый квест с выбором:что взять а что не взять.
+Таблетосы - с выбором. Подарок который не отдал и письмо дядюшки (Если не брать то свечи будут быстрее сгорать).
+ Описание зубной щетки аля "она казалось была стара как и этот дом, её давно н"
+далее собирается дома, читает письмо от дядюшки который завещал дом
+идет туда, встречает свою бывшую невесту, которая говорит, что мол рада видеть
+ты не отчаиваешься после тех событий (они замолкают) далее она спрашивает опять дом продаешь
+он говорит да ептить (и опционально отдает подарок, если отдаешь - то свечи будут медленее тухнуть)
+после прощания он находит дом но уже вечером, начинается гроза ливень и ему придется остаться.
+если в начале взяты таблетки то есть выбор съесть таблетосы или нет (влияет на то как быстро гаснут свечи) если принял - то медленее. */
+body {
+  /* Перенеси fs62 в Html ебалан */
+   font-size:62.5%;
+   background-color: black;
+   color:white;
+}
+
+#myProgress {
+  width: 300px;
+  background-color: grey;
+  padding: 2px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+#myBar {
+  width: 1%;
+  height: 15px;
+  transition: all 1s;
+border-radius: 4px;
+box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.sanity-stable {
+  transition: color 2s;
+  background-color: green;
+}
+.sanity-problem {
+  transition: color 2s;
+  background-color: yellow;
+}
+.sanity-irrational{
+  transition: color 2s;
+  background-color: crimson;
+}
+.sanity-mad {
+  transition: color 2s;
+  background-color: red;
+}
+
+#testB {
+  width: 40px;
+  height: 40px;
+}
+
+
+.inventory {
+  width: 28.7rem;
+  height: 29rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.check-candles {
+  width: 20px;
+  height: 20px;
+}
+
+.Candle-stones {
+  position: absolute;
+  top: 550px;
+  left: 145px;
+  transition: opacity 2s;
+}
+
+.Candle-work_table {
+  position: absolute;
+  top: 115px;
+  left: 444px;
+  transition: opacity 2s;
+}
+.shadow-candle-bed_0 {
+  top: 440px;
+  left: 290px;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+
+
+.cloud-shadow_npc {
+  top: 13px;
+  left: 27px;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.cloud-shadow_npc:hover {
+    opacity: 0;
+}
+
+.shadow-candle-bed-2 {
+  transition: opacity 0.1s;
+}
+.shadow-candle-bed_25 {
+  top: 420px;
+  left: 230px;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.shadow-candle-bed_50 {
+  top: 420px;
+  left: 237px;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.shadow-candle-bed_75 {
+  top:420px;
+  left: 242px;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.shadow-candle-bed_100 {
+  top:420px;
+  left: 237px;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+
+
+.shadow-candle-stones_0 {
+  top:250px;
+  left: 5px;
+}
+
+.shadow-candle-stones_25 {
+  top:250px;
+  left: 5px;
+}
+
+.shadow-candle-stones_50 {
+  top:240px;
+  left: 0px;
+}
+
+.shadow-candle-stones_75 {
+  top:250px;
+  left: 5px;
+}
+
+.shadow-candle-stones_100 {
+  top:250px;
+  left: 5px;
+}
+
+.Candle-fireplace {
+  top: 140px;
+  left: 179px;
+  transition: opacity 2s;
+}
+
+.shadow-candle_fireplace_0 {
+  top:60px;
+  left: 84px;
+}
+.shadow-candle_fireplace_25 {
+  top:40px;
+  left: 20px;
+}
+.shadow-candle_fireplace_50 {
+  top:40px;
+  left: 20px;
+}
+.shadow-candle_fireplace_75 {
+  top:40px;
+  left: 20px;
+}
+.shadow-candle_fireplace_100 {
+  top:40px;
+  left: 20px;
+}
+
+.Candle-dinner_table {
+  position: absolute;
+  top: 347px;
+  left: 322px;
+  transition: opacity 2s;
+}
+
+.shadow-candle-dinner_table_0 {
+  position: absolute;
+  top: 275px;
+  left: 235px;
+}
+
+.shadow-candle-dinner_table_25 {
+  position: absolute;
+  top: 250px;
+  left: 135px;
+}
+
+.shadow-candle-dinner_table_50 {
+  position: absolute;
+  top: 250px;
+  left: 135px;
+}
+
+.shadow-candle-dinner_table_75 {
+  position: absolute;
+  top: 250px;
+  left: 135px;
+}
+
+.shadow-candle-dinner_table_100 {
+  position: absolute;
+  top: 235px;
+  left: 135px;
+}
+
+.shadow-candle_table_0 {
+  top:60px;
+  left: 374px;
+}
+.shadow-candle_table_25{
+  top:50px;
+  left: 324px;
+}
+.shadow-candle_table_50{
+  top:40px;
+  left: 324px;
+}
+.shadow-candle_table_75{
+  top:40px;
+  left: 305px;
+}
+.shadow-candle_table_100{
+  top:55px;
+  left: 280px;
+}
+.inventory div {
+
+}
+
+.wrapper {
+  display: flex;
+
+}
+
+.quest-text {
+  display: flex;
+  /* margin-left: 7rem; */
+  flex-direction: column;
+}
+
+
+.main-text {
+  height: 15rem;
+  width: 36rem;
+  border: 2px solid white;
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+.droping-wrapper {
+  display: flex;
+}
+.wrapper-choices {
+  display:flex;
+  flex-direction: column;
+  width: 36rem;
+  height: 10rem;
+margin-left: 2rem;
+  border: 2px solid blue;
+  font-size: 1.5rem;
+}
+
+#choice1 {
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+
+#choice2 {
+margin-bottom: 1rem;
+}
+
+#choice3 {
+margin-bottom: 1rem;
+}
+html {
+  font-size: 62.5%;
+}
+.house {
+  height: 67rem;
+  width: 58.6rem;
+  border: 2px solid orange;
+  background-image: url("img/house.png");
+  position:relative;
+}
+
+.house img {
+  position:absolute;
+
+}
+.fireplace {
+  left: 162px;
+  top:40px;
+
+}
+
+.animation {
+  left: 200px;
+  top: 500px;
+
+  /* transition: 3s;
+  transition-timing-function: linear; */
+
+}
+/* .aminwrap {
+  position: relative;
+
+} */
+.emotion {
+  position: absolute;
+  left: 190px;
+  top: 160px;
+  opacity: 0;
+}
+
+.test1 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid blue;
+  top: 500px;
+  left: 100px;
+}
+
+.test2 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid blue;
+  top: 350px;
+  left: 100px;
+}
+
+.test3 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid blue;
+  top: 580px;
+  left: 480px;
+}
+
+.test4 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid blue;
+  top: 210px;
+  left: 180px;
+}
+
+.test {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid blue;
+  left: 224px;
+  top: 250px;
+}
+
+.work-table {
+  position: absolute;
+  left: 335px;
+  top: 110px;
+}
+
+.cupboard {
+
+  position: absolute;
+  left: 480px;
+  top: 92px;
+}
+
+.chair-top {
+  position: absolute;
+  left: 370px;
+  top: 165px;
+
+}
+
+.collision {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 195px;
+  top: 332px;
+  /* border: 2px solid red; */
+}
+
+.target {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid green;
+  top: 600px;
+  left: 250px;
+}
+.carpet {
+  position: absolute;
+  left: 195px;
+  top: 332px;
+
+}
+
+
+.shadows {
+  position: absolute;
+  left: 0px;
+  top: 20px;
+}
+
+.lamp {
+  position: absolute;
+  left: 495px;
+  top: 458px;
+}
+
+.bed {
+  position: absolute;
+  left: 395px;
+  top: 490px;
+}
+
+.pedestal {
+  position: absolute;
+  left: 355px;
+  top: 516px;
+}
+
+.chair_dinner-top {
+  position: absolute;
+  left: 209px;
+  top: 353px;
+}
+
+.chair_dinner-bottom {
+  position: absolute;
+  left: 209px;
+  top: 415px;
+}
+
+.chair_dinner-right {
+  position: absolute;
+  left: 302px;
+  top: 352px;
+}
+
+.wooden_crate {
+  position: absolute;
+  left: 236px;
+  top: 400px;
+}
+
+.dinner_table {
+  position: absolute;
+  left: 223px;
+  top: 323px;
+}
+
+.spinning_weel {
+  position: absolute;
+  left: 43px;
+  top: 470px;
+}
+
+.spinning_weel_chair {
+  position: absolute;
+  left: 123px;
+  top: 535px;
+}
+
+.shadows_dinner_table {
+  position: absolute;
+  left: 213px;
+  top: 370px;
+
+}
+
+#player {
+	position: absolute;
+	top: 50px;
+	left: 20px;
+	background: #FC0;
+	width: 50px;
+	height: 50px;
+}
+#thing1 {
+	position: absolute;
+	top: 75px;
+	left: 200px;
+	background: #06C;
+	width: 25px;
+	height: 25px;
+}
+
+.things {
+  position: absolute;
+  width: 25px;
+	height: 25px;
+  /* background: #06C; */
+}
+
+#collision-fireplace {
+top: 90px;
+left: 162px;
+width: 160px;
+height: 50px;
+}
+
+#collision-table{
+  top: 90px;
+  left: 335px;
+  width: 150px;
+  height: 50px;
+  /* background: #000; */
+}
+#collision-cupboard{
+  top: 90px;
+  left: 490px;
+  width: 70px;
+  height: 50px;
+  /* background: red; */
+}
+
+#collision-dinner-table{
+  left: 243px;
+  top: 363px;
+  width: 90px;
+  height: 20px;
+  background: purple;
+}
+
+#collision-stones{
+  top: 530px;
+  left: 43px;
+  width: 120px;
+  height: 30px;
+  /* background: yellow; */
+}
+
+#collision-pedestal{
+  top: 520px;
+  left: 370px;
+  width: 3px;
+  height: 30px;
+  background: black;
+}
+
+#collision-lamp{
+  top: 515px;
+  left: 520px;
+  width: 30px;
+  height: 30px;
+  /* background: green; */
+}
+
+#collision-bed{
+  top: 530px;
+  left: 480px;
+  width: 10px;
+  height: 10px;
+  /* background: blue; */
+}
+
+#collision-border-1{
+  top: 0px;
+  left: 0px;
+  width: 587px;
+  height: 20px;
+  /* background: orange; */
+}
+
+#collision-border-2{
+  top: 0px;
+  left: 0px;
+  width: 20px;
+  height: 671px;
+  /* background: orange; */
+}
+
+#collision-border-3{
+  top: 651px;
+  left: 0px;
+  width: 587px;
+  height: 20px;
+  /* background: orange; */
+}
+#collision-border-4{
+  top: 0px;
+  left: 567px;
+  width: 20px;
+  height: 671px;
+  /* background: orange; */
+}
+
+
+
+.control-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 150px;
+  height: 100px;
+  margin-left: 1rem;
+}
+
+.control-wrapper button {
+  width: 50px;
+  height: 50px;
+}
+
+.animation_shadow {
+  left: 183px;
+  top: 575px;
+}
+
+.fill {
+  background-image: url("http://source.unsplash.com/random/153x170");
+  cursor: pointer;
+width: 10rem;
+height: 10rem;
+
+}
+
+.empty {
+  width: 11rem;
+  background-color: white;
+  height: 11rem;
+  display: inline-block;
+
+}
+.hold {
+  border: 2px solid yellow;
+}
+.hovered {
+  background: gray;
+  border-style: dashed;
+}
+
+.invisible {
+  display: none;
+}
+
+.Candle-bed {
+  top: 520px;
+  left: 390px;
+  transition: opacity 2s;
+  opacity: 1;
+}
+
+.candle-opacity-hidden {
+  opacity: 0;
+}
+
+#testClear {
+  width: 40px;
+  height: 40px;
+}
+
+.darkness {
+  position: relative;
+
+}
+.overlayShadow-2 {
+  position: relative;
+  z-index: 122
+}
+.overlayShadow {
+ z-index: -1;
+}
+.typedtext {
+  font-family: 'Waiting for the Sunrise', cursive;
+  font-size:30px;
+  margin: 10px 50px;
+  letter-spacing: 6px;
+  font-weight: bold;
+}
+.parallax-slider {
+
+    opacity: 1;
+}
+.transitioning-src {
+    opacity: 0;
+}
+
+.stone-tablet {
+  position: absolute;
+  top:380px;
+  left:26px;
+}
+
+
+.item-1 {
+    background-image: url("img/item-1.png");
+}
+.item-2 {
+  background-image: url("img/item-2.png");
+}
+.item-3 {
+  background-image: url("img/item-3.png");
+}
+.item-4 {
+  background-image: url("img/item-4.png");
+}
+.item-5 {
+  background-image: url("img/item-5.png");
+}
+.item-6 {
+  background-image: url("img/item-6.png");
+}
+
+h2 {
+  color: #a7a3a4;
+  margin-left: 80px;
+}
+
+[data-drop-target] {
+			height: 300px;
+			width: 300px;
+			margin: 25px;
+			background-color: gainsboro;
+
+		}
+		.drag-enter {
+			border: 3px dashed #000;
+		}
+		.box {
+			width: 150px;
+			height: 150px;
+      float: left;
+		}
+    .box:nth-child(3) {
+      clear: both;
+    }
+		.vial_of_tears {
+      /* если игра завершается проигрышем то приходит баба и говорит аля я тебя спасу, в какой раз уже, только вот ты уже запоминать изначаль
+      так что и они знают так что много воскрешалок у тебя не осталось и выдаёт свиток на следующие */
+      background-image: url("img/inv_trinket+vial_of_tears.png");
+      background-repeat:no-repeat;
+      background-color: black;
+      background-position: center;
+
+		}
+    .bookofHope {
+      background-image: url("img/inv_trinket+philosophers_wisdom.png");
+      background-repeat:no-repeat;
+      background-color: black;
+      background-position: center;
+    }
+		.philosophers_wisdom {
+      /* если игра завершается проигрышем то приходит баба и говорит аля я тебя спасу, в какой раз уже, только вот ты уже запоминать изначаль
+      так что и они знают так что много воскрешалок у тебя не осталось и выдаёт свиток на следующие */
+      background-image: url("img/inv_trinket+philosophers_wisdom.png");
+      background-repeat:no-repeat;
+      background-color: black;
+      background-position: center;
+		}
+    .profane_scroll {
+      /* если игра завершается проигрышем то приходит баба и говорит аля я тебя спасу, в какой раз уже, только вот ты уже запоминать изначаль
+      так что и они знают так что много воскрешалок у тебя не осталось и выдаёт свиток на следующие */
+      background-image: url("img/inv_trinket+profane_scroll.png");
+      background-repeat:no-repeat;
+      background-color: black;
+      background-position: center;
+		}
+		.rayners_seal {
+      /* если игра завершается проигрышем то приходит баба и говорит аля я тебя спасу, в какой раз уже, только вот ты уже запоминать изначаль
+      так что и они знают так что много воскрешалок у тебя не осталось и выдаёт свиток на следующие */
+      background-image: url("img/inv_trinket+rayners_seal.png");
+      background-repeat:no-repeat;
+      background-color: black;
+      background-position: center;
+		}
+
+    .droping {
+      position: relative;
+      height: 150px;
+			width: 150px;
+      border: red 2px solid;
+      margin-left: 2rem;
+    }
+    .dropInv {
+      height: 300px;
+      width: 300px;
+      margin: 25px;
+      background-color: gainsboro;
+    }
