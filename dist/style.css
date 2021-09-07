@@ -367,13 +367,13 @@ body {
 .paint {
   position: relative;
   height: 100%;
-  width: 600px;
+  width: 700px;
 }
 
 .portfolioImg {
   position: absolute;
-  top: 2.5rem;
-  right: 0rem;
+  top: 90px;
+  right: 100px;
   z-index: -1;
   width: 37.5rem;
 }
