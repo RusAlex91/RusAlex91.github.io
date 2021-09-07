@@ -236,7 +236,13 @@ const portfolioCreation = {
       <img class="paint" src="../assets/video-player.png" alt="" />
       <img
         class="portfolioImg"
-        alt=""
+        loading="lazy"
+        src="./assets/portfolio/light/test.png"
+        width="600"
+      />
+      <img
+        class="portfolioImg"
+        alt="${name}"
         loading="lazy"
         src="${src}"
         width="600"
