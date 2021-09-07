@@ -22,10 +22,13 @@ const controls = {
     document
       .getElementsByClassName('contact-me')[0]
       .addEventListener('click', () => {
+        document.getElementsByClassName('pop-up')[0].classList.add('hidden-d')
+
         document
           .getElementsByClassName('contact-wrapper')[0]
-          .classList.toggle('hidden-d')
-        controls.togglePortfolioWindow()
+          .classList.remove('hidden-d')
+
+        document.getElementsByClassName('memes')[0].classList.add('hidden-d')
       })
   },
   togglePortfolio: function () {

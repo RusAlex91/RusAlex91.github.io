@@ -5,7 +5,7 @@ const portfolioCases = {
       name: 'Retrowave Music Player',
       desc:
         'Простой музыкальный плеер. Использованные технологии: HTML, CSS, JS',
-      github: 'https://github.com/RusAlex91/1.-Register-Validator',
+      github: 'https://github.com/RusAlex91/10.-Music-player',
       src: '../assets/portfolio/light/RMP.gif',
       webLink: 'https://rusalex91.github.io/projects/lite/retro-player/dist/'
     },
@@ -142,7 +142,7 @@ const portfolioCases = {
   heavy: {
     1: {
       id: 1,
-      name: 'BBS Shadow World',
+      name: 'BBS Shadow Front',
       desc:
         'SPA с ответами на вопросы к собеседованию.<br>Технологии: HTML, CSS, JS, VUE, SCSS, FIREBASE',
       github: 'https://github.com/RusAlex91/shadow-front',
