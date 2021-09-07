@@ -260,9 +260,8 @@ body {
 }
 
 .pseudo-panel button {
-  margin-top: 0.3125rem;
+  margin: 0.3125rem;
   width: 1.875rem !important;
-  margin-left: 0.3125rem;
   font-family: m8 !important;
 }
 

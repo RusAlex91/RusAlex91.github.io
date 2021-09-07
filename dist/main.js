@@ -97,7 +97,7 @@ const controls = {
   showPortfolioItem: function () {
     document
       .getElementsByClassName('portfolio-item')[0]
-      .classList.toggle('hidden-d')
+      .classList.add('hidden-d')
   },
   togglePortfolioWindow: function () {
     document.getElementsByClassName('pop-up')[0].classList.toggle('hidden-d')
