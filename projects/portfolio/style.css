@@ -25,8 +25,8 @@ main {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
-  font-size: 9.6vw;
-  line-height: 11.333vw;
+  font-size: 4.6vw;
+  line-height: 5.333vw;
 
   color: #ffffff;
 
@@ -44,8 +44,8 @@ main {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
-  font-size: 4.8vw;
-  line-height: 5.6vw;
+  font-size: 1.8vw;
+  line-height: 1.6vw;
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -56,7 +56,7 @@ main {
 .links a {
   text-decoration: none;
   color: white;
-  margin-bottom: 4vw;
+  margin-bottom: 2vw;
 }
 
 .links a:hover {
@@ -72,8 +72,8 @@ main {
 
 .links img {
   position: relative;
-  top: 0.933vw;
-  margin-right: 6.667vw;
+  top: 0.8vw;
+  margin-right: 3vw;
 }
 
 .works {
@@ -87,7 +87,7 @@ main {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
-  font-size: 6.4vw;
+  font-size: 3.4vw;
   line-height: 7.467vw;
   color: #ffffff;
 }
@@ -98,15 +98,15 @@ main {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
-  font-size: 6.4vw;
-  line-height: 7.467vw;
+  font-size: 3.4vw;
+  line-height: 3.467vw;
 }
 .works a {
   color: #fff;
   font-family: Raleway;
   font-style: normal;
   font-weight: normal;
-  font-size: 3.2vw;
+  font-size: 1.2vw;
   line-height: 3.733vw;
   text-decoration-line: underline;
 }
@@ -122,7 +122,7 @@ main {
   flex-direction: column;
 }
 .works-tags a {
-  font-size: 4.533vw;
+  font-size: 3.533vw;
 }
 .works-tags span {
   font-size: 2.667vw;
@@ -140,8 +140,8 @@ main {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
-  font-size: 5.333vw;
-  line-height: 7.467vw;
+  font-size: 3.333vw;
+  line-height: 3.467vw;
 }
 
 .work a {
@@ -149,22 +149,9 @@ main {
   font-family: Raleway;
   font-style: normal;
   font-weight: normal;
-  font-size: 3.2vw;
+  font-size: 2.2vw;
   line-height: 3.733vw;
   text-decoration-line: underline;
-}
-
-.work-tech {
-  color: #fff;
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 3.2vw;
-  line-height: 3.733vw;
-}
-
-.work-tech span {
-  color: #fc8071;
 }
 
 #work-simple {
@@ -177,7 +164,7 @@ main {
 }
 
 #work-simple h2 {
-  font-size: 5.867vw;
+  font-size: 3.867vw;
   font-weight: 600;
   color: #fc8071;
 }
@@ -191,7 +178,7 @@ main {
 }
 
 #work-complex h2 {
-  font-size: 5.867vw;
+  font-size: 3.867vw;
   font-weight: 600;
   color: #fc8071;
 }
@@ -209,9 +196,22 @@ main {
   font-family: Raleway;
   font-style: normal;
   font-weight: normal;
-  font-size: 3.2vw;
-  line-height: 3.733vw;
+  font-size: 2vw;
+  line-height: 2.733vw;
   width: 80vw;
+}
+
+.work-tech {
+  color: #fff;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2vw;
+  line-height: 2.733vw;
+}
+
+.work-tech span {
+  color: #fc8071;
 }
 
 @media (max-width: 600px) {
