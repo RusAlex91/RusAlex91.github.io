@@ -4,6 +4,25 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  --main: 0vw;
+
+  --intro: calc(0vw - var(--main));
+  --links: calc(0vw - var(--main));
+  --works-h1: calc(0vw - var(--main));
+  --works-h2: calc(0vw - var(--main));
+  --works-a: calc(0vw - var(--main));
+  --works-tags-a: calc(0vw - var(--main));
+  --works-tags-span: calc(0vw - var(--main));
+  --work-h3: calc(0vw - var(--main));
+  --work-a: calc(0vw - var(--main));
+  --work-simple-h2: calc(0vw - var(--main));
+  --work-complex-h2: calc(0vw - var(--main));
+  --work-desc: calc(0vw - var(--main));
+  --work-tech: calc(0vw - var(--main));
+}
+
 body {
   background-color: #000000;
   font-family: 'Raleway', sans-serif;
@@ -25,8 +44,8 @@ main {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
-  font-size: 4.6vw;
-  line-height: 5.333vw;
+  /* font-size: 4.6vw; */
+  font-size: calc(4.6vw - var(--intro));
 
   color: #ffffff;
 
@@ -44,8 +63,8 @@ main {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
-  font-size: 1.8vw;
-  line-height: 1.6vw;
+  font-size: calc(1.8vw - var(--links));
+
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -87,8 +106,8 @@ main {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
-  font-size: 3.4vw;
-  line-height: 7.467vw;
+  font-size: calc(3.4vw - var(--works-h1));
+
   color: #ffffff;
 }
 
@@ -98,16 +117,15 @@ main {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
-  font-size: 3.4vw;
-  line-height: 3.467vw;
+  font-size: calc(3.4vw - var(--works-h2));
 }
 .works a {
   color: #fff;
   font-family: Raleway;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.2vw;
-  line-height: 3.733vw;
+  font-size: calc(1.2vw - var(--works-a));
+
   text-decoration-line: underline;
 }
 
@@ -116,16 +134,16 @@ main {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
-  line-height: 7.467vw;
+
   display: flex;
 
   flex-direction: column;
 }
 .works-tags a {
-  font-size: 3.533vw;
+  font-size: calc(3.5vw - var(--works-tags-a));
 }
 .works-tags span {
-  font-size: 2.667vw;
+  font-size: calc(2.6vw - var(--works-tags-span));
 }
 
 .work {
@@ -140,8 +158,7 @@ main {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
-  font-size: 3.333vw;
-  line-height: 3.467vw;
+  font-size: calc(3.3vw - var(--work-h3));
 }
 
 .work a {
@@ -149,8 +166,8 @@ main {
   font-family: Raleway;
   font-style: normal;
   font-weight: normal;
-  font-size: 2.2vw;
-  line-height: 3.733vw;
+  font-size: calc(2.2vw - var(--work-a));
+
   text-decoration-line: underline;
 }
 
@@ -164,7 +181,7 @@ main {
 }
 
 #work-simple h2 {
-  font-size: 3.867vw;
+  font-size: calc(3.8vw - var(--work-simple-h2));
   font-weight: 600;
   color: #fc8071;
 }
@@ -178,7 +195,7 @@ main {
 }
 
 #work-complex h2 {
-  font-size: 3.867vw;
+  font-size: calc(3.8vw - var(--work-complex-h2));
   font-weight: 600;
   color: #fc8071;
 }
@@ -196,8 +213,8 @@ main {
   font-family: Raleway;
   font-style: normal;
   font-weight: normal;
-  font-size: 2vw;
-  line-height: 2.733vw;
+  font-size: calc(2vw - var(--work-desc));
+
   width: 80vw;
 }
 
@@ -206,16 +223,30 @@ main {
   font-family: Raleway;
   font-style: normal;
   font-weight: normal;
-  font-size: 2vw;
-  line-height: 2.733vw;
+  font-size: calc(2vw - var(--work-tech));
 }
 
 .work-tech span {
   color: #fc8071;
 }
 
-@media (max-width: 600px) {
+#up-btn {
+  position: fixed;
+  right: 5vw;
+  bottom: 5vw;
+}
+
+@media (max-width: 500px) {
   main {
-    width: 80vw;
+    width: 360px;
+    margin-left: 5vw;
+  }
+
+  .work-link img {
+    width: 300px;
+  }
+
+  html {
+    --main: 4vw;
   }
 }
