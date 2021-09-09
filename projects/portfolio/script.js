@@ -248,8 +248,21 @@ const portfolioCases = {
       src: './images/work-sample/complex/tzar.gif',
       webLink: 'https://rusalex91.github.io/projects/heavy/tzar/'
     }
+  },
+  testing: {
+    1: {
+      id: 1,
+      name: 'Gallery',
+      desc:
+        'Gallery with drag and drop, JSON file/IMG file upload, URL upload, switch css for alternative gallery look and preloader.',
+      tech: 'HTML, CSS, JavaScript',
+      github: 'https://github.com/RusAlex91/frontend-test-assignment',
+      src: './images/work-sample/simple/test_case_1.gif',
+      webLink: 'https://rusalex91.github.io/projects/light/testing_case_1/'
+    }
   }
 }
 
 portfolioCreation.extractPortfolioData('complex')
 portfolioCreation.extractPortfolioData('simple')
+portfolioCreation.extractPortfolioData('testing')

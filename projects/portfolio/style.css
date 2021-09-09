@@ -14,11 +14,12 @@ html {
   --works-h2: calc(0vw - var(--main));
   --works-a: calc(0vw - var(--main));
   --works-tags-a: calc(0vw - var(--main));
-  --works-tags-span: calc(0vw - var(--main));
+  --works-tags-span: calc(0.5vw - var(--main));
   --work-h3: calc(0vw - var(--main));
   --work-a: calc(0vw - var(--main));
   --work-simple-h2: calc(0vw - var(--main));
   --work-complex-h2: calc(0vw - var(--main));
+  --work-testing-h2: calc(0vw - var(--main));
   --work-desc: calc(0vw - var(--main));
   --work-tech: calc(0vw - var(--main));
 }
@@ -143,6 +144,9 @@ main {
   font-size: calc(3.5vw - var(--works-tags-a));
 }
 .works-tags span {
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+  font-style: italic;
   font-size: calc(2.6vw - var(--works-tags-span));
 }
 
@@ -196,6 +200,21 @@ main {
 
 #work-complex h2 {
   font-size: calc(3.8vw - var(--work-complex-h2));
+  font-weight: 600;
+  color: #fc8071;
+}
+
+#work-testing {
+  margin-top: 26.667vw;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: left;
+}
+
+#work-testing h2 {
+  font-size: calc(3.8vw - var(--work-testing-h2));
   font-weight: 600;
   color: #fc8071;
 }
