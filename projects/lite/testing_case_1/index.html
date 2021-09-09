@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css" id="main">
+    <!-- add default css to have styles when switching themes -->
+    <link rel="stylesheet alternate" href="alternative.css" id="light">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div id="drop-area">
+            <div class="gallery">
+                <!-- items -->
+                <ul class="gallery-list">
+                    <li class="gallery-list__item">
+                        <img data-src-1="https://don16obqbay2c.cloudfront.net/frontend-test-task/images/493550746.jpg" src="https://www.coloreye.com/v_comm/global/images/loading.gif" alt="" loading="lazy" decoding="async">
+                        <div class="middle-wrapper">
+                            <button class="middle-wrapper__deletebtn">Delete</button>
+                        </div>
+                    </li>
+
+                    <li class="gallery-list__item">
+                        <img data-src-1="https://don16obqbay2c.cloudfront.net/frontend-test-task/images/448964021.jpg" src="https://www.coloreye.com/v_comm/global/images/loading.gif" alt="" loading="lazy" decoding="async">
+                        <div class="middle-wrapper">
+                            <button class="middle-wrapper__deletebtn">Delete</button>
+                        </div>
+                    </li>
+                    <li class="gallery-list__item">
+                        <img data-src-1="https://don16obqbay2c.cloudfront.net/frontend-test-task/images/493550739.jpg" src="https://www.coloreye.com/v_comm/global/images/loading.gif" alt="" loading="lazy" decoding="async">
+                        <div class="middle-wrapper">
+                            <button class="middle-wrapper__deletebtn">Delete</button>
+                        </div>
+                    </li>
+                    <li class="gallery-list__item">
+                        <img data-src-1="https://don16obqbay2c.cloudfront.net/frontend-test-task/images/448964009.jpg" src="https://www.coloreye.com/v_comm/global/images/loading.gif" alt="" loading="lazy" decoding="async">
+                        <div class="middle-wrapper">
+                            <button class="middle-wrapper__deletebtn">Delete</button>
+                        </div>
+                    </li>
+
+                    <li class="gallery-list__item">
+                        <img data-src-1="https://don16obqbay2c.cloudfront.net/frontend-test-task/images/493550740.jpg" src="https://www.coloreye.com/v_comm/global/images/loading.gif" alt="" loading="lazy" decoding="async">
+                        <div class="middle-wrapper">
+                            <button class="middle-wrapper__deletebtn">Delete</button>
+                        </div>
+                    </li>
+
+                    <li class="gallery-list__item">
+                        <img data-src-1="https://don16obqbay2c.cloudfront.net/frontend-test-task/images/448964008.jpg" src="https://www.coloreye.com/v_comm/global/images/loading.gif" alt="" loading="lazy" decoding="async">
+                        <div class="middle-wrapper">
+                            <button class="middle-wrapper__deletebtn">Delete</button>
+                        </div>
+                    </li>
+
+                    <li class="gallery-list__item">
+                        <img data-src-1="https://don16obqbay2c.cloudfront.net/frontend-test-task/images/448964011.jpg" src="https://www.coloreye.com/v_comm/global/images/loading.gif" alt="" loading="lazy" decoding="async">
+                        <div class="middle-wrapper">
+                            <button class="middle-wrapper__deletebtn">Delete</button>
+                        </div>
+                    </li>
+
+                </ul>
+                <div class="modal"></div>
+
+
+
+            </div>
+
+            <form class="dnd-form-img-uploader">
+                <p>Загрузите изображения с помощью диалога выбора файлов или перетащив нужные изображения в выделенную область
+                </p>
+                <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+                <label class="button" for="fileElem">Выбрать изображения</label>
+            </form>
+        </div>
+
+        <form class="form-img-file-uploader">
+            <input type="file" class="form-img-file-uploader__input-file" id="upload-file-input" accept="image/x-png,image/gif,image/jpeg,application/JSON">
+            <!-- type="submit" delited -->
+            <button type="button" onclick="galleryLoad.fileUpload()" class="form-img-file-uploader__btn" id="upload-file-btn">Upload</button>
+        </form>
+
+        <form class="form-img-url-uploader">
+            <input type="url" class="form-img-url-uploader__input-url" placeholder="Insert image URL" id="upload-img-input">
+            <!-- type="submit" delited -->
+            <button type="button" class="form-img-url-uploader__btn" id="upload-img-btn">Upload</button>
+        </form>
+        <div class="theme-controls">
+            <button class="theme-controls__theme-btn-cover control-btn" disabled onclick="this.toggleAttribute('disabled'), galleryControls.enableStylesheet('theme-controls__theme-btn-full ','main.css')">Change
+                to
+                cover</button>
+            <button class="theme-controls__theme-btn-full control-btn" onclick="this.toggleAttribute('disabled'), galleryControls.disableStylesheet('theme-controls__theme-btn-cover','alternative.css')">Change
+                to
+                full
+                size</button>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+
+
+
+</html>
